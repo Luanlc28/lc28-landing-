@@ -1,0 +1,82 @@
+{
+  "grafite": {
+    "nome": "Grafite",
+    "hex": "#0F1F2E",
+    "rgb": [
+      15,
+      31,
+      46
+    ],
+    "cmyk_aproximado": [
+      67,
+      33,
+      0,
+      82
+    ],
+    "uso": "Texto, assinatura e fundo escuro"
+  },
+  "azul-profundo": {
+    "nome": "Azul profundo",
+    "hex": "#2E5D7A",
+    "rgb": [
+      46,
+      93,
+      122
+    ],
+    "cmyk_aproximado": [
+      62,
+      24,
+      0,
+      52
+    ],
+    "uso": "Botões, links e áreas institucionais"
+  },
+  "azul-nevoa": {
+    "nome": "Azul névoa",
+    "hex": "#8FB3C9",
+    "rgb": [
+      143,
+      179,
+      201
+    ],
+    "cmyk_aproximado": [
+      29,
+      11,
+      0,
+      21
+    ],
+    "uso": "Acentos, símbolos e aplicações escuras"
+  },
+  "cinza-claro": {
+    "nome": "Cinza claro",
+    "hex": "#E6EEF4",
+    "rgb": [
+      230,
+      238,
+      244
+    ],
+    "cmyk_aproximado": [
+      6,
+      2,
+      0,
+      4
+    ],
+    "uso": "Superfícies secundárias e divisórias"
+  },
+  "off-white": {
+    "nome": "Off-white",
+    "hex": "#F8FAFC",
+    "rgb": [
+      248,
+      250,
+      252
+    ],
+    "cmyk_aproximado": [
+      2,
+      1,
+      0,
+      1
+    ],
+    "uso": "Fundo principal e texto sobre grafite"
+  }
+}

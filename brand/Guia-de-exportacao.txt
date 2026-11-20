@@ -1,0 +1,3 @@
+Ícone de app em 1024 × 1024 px com fundo sólido. A plataforma pode aplicar sua própria máscara.
+Avatar quadrado de 1080 × 1080 px com monograma central e margem para o corte circular.
+Favicon em SVG, PNG de 64 px e ICO multirresolução.

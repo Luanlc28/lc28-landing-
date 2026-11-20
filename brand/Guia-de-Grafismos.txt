@@ -1,0 +1,2 @@
+O grafismo deriva do movimento de ligação entre o 2 e o 8. Use em margens, fundos ou transições.
+Reserve a área mais limpa para títulos e chamadas. Use textura e padrão em baixa opacidade sobre áreas amplas.
