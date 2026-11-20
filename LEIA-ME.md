@@ -8,6 +8,7 @@ Arquivo único (`index.html`), sem dependências além das fontes do Google. Pod
 |---|---|
 | Número comercial do WhatsApp | `WHATSAPP_NUMBER`, só dígitos com DDI e DDD (ex.: `5511999998888`). Vazio = abre o WhatsApp sem destinatário e mostra aviso. |
 | Salvar o briefing antes do WhatsApp | `onBriefingSubmit(payload)`. É chamado no clique, antes de abrir o WhatsApp. Use `navigator.sendBeacon` ou `fetch(..., {keepalive:true})` para não travar o redirecionamento. |
+| Domínio | Na tag `og:image` do `<head>`, troque `img/og.jpg` pela URL completa (ex.: `https://seudominio.com.br/img/og.jpg`). Sem isso a prévia do link no WhatsApp sai sem imagem. |
 | Cases autorizados | Array `CASES`: título, `image` (URL do print), objetivo, período, investimento, métrica e o que foi feito. Enquanto todos tiverem `ilustrativo: true`, a seção Resultados e os links do menu ficam escondidos. |
 
 ## Como o briefing decide as perguntas
