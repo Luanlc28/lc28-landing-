@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Gestão de tráfego, sites, landing pages, aplicativos, sistemas e automações com IA para conectar o anúncio, o contato e o atendimento.">
-<meta property="og:title" content="LC28 · Atraia clientes. Organize o atendimento.">
+<meta name="description" content="Anúncio, site e atendimento com IA para negócios locais. Mais clientes chegando no WhatsApp, e ninguém fica sem resposta.">
+<meta property="og:title" content="LC28 · Mais clientes no WhatsApp, todos respondidos">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <meta name="theme-color" content="#0B1824">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-<title>LC28 · Atraia clientes. Organize o atendimento.</title>
+<title>LC28 · Mais clientes no WhatsApp, todos respondidos</title>
 </head>
 <body>
 <title>LC28 Briefing</title>
@@ -204,44 +204,25 @@ button,input,textarea{font:inherit;color:inherit}
 .seg figcaption span{font-size:18px}
 @media(min-width:1120px){.segs-track{justify-content:center}}
 
-/* Solutions: works wheel (rotating ring of the six fronts) */
-.wheel-layout{display:grid;gap:28px;align-items:center}
-@media(min-width:900px){.wheel-layout{grid-template-columns:1.05fr .95fr;gap:48px}}
-.wheel{--s:clamp(64px,19cqw,92px);--R:calc(50cqw - var(--s) / 2 - 4px);--rot:0deg;position:relative;width:min(100%,500px);aspect-ratio:1;margin:0 auto;container-type:inline-size;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
-.wheel.dragging{cursor:grabbing}
-.wheel::before{content:"";position:absolute;inset:calc(var(--s) / 2 + 4px);border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--mist-ink) 45%,transparent)}
-.wheel::after{content:"";position:absolute;inset:calc(var(--s) + 22px);border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff,var(--mist-soft));box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -40px rgba(15,31,46,.5)}
-.wheel-ring{position:absolute;inset:0;z-index:2}
-.w-item{position:absolute;left:50%;top:50%;width:var(--s);height:var(--s);margin:calc(var(--s) / -2) 0 0 calc(var(--s) / -2);border:0;border-radius:24px;background:#fff;color:var(--ink);display:grid;place-items:center;align-content:center;gap:4px;padding:6px;cursor:pointer;box-shadow:0 10px 24px -14px rgba(15,31,46,.45),inset 0 0 0 1px var(--line);
-  transform:rotate(calc(var(--i) * var(--step) + var(--rot))) translateY(calc(var(--R) * -1)) rotate(calc((var(--i) * var(--step) + var(--rot)) * -1)) scale(var(--sc,1));
-  transition:transform .7s cubic-bezier(.2,.8,.2,1),background .3s,color .3s,box-shadow .3s}
-.wheel.dragging .w-item{transition:background .3s,color .3s}
-.w-emoji{display:grid;place-items:center;width:clamp(30px,9cqw,42px);height:clamp(30px,9cqw,42px);border-radius:12px;background:rgba(46,93,122,.1);color:var(--action);line-height:1;transition:background .3s,color .3s}
-.w-emoji svg{width:62%;height:62%}
-.w-item.on .w-emoji{background:rgba(143,179,201,.2);color:var(--mist)}
-.w-item span{font-size:clamp(9.5px,2.6cqw,12px);font-weight:600;line-height:1.1;text-align:center}
-.w-item.on{--sc:1.14;background:var(--graphite);color:#fff;box-shadow:0 16px 30px -12px rgba(15,31,46,.6),0 0 0 4px var(--mist)}
-.wheel-center{position:absolute;inset:calc(var(--s) + 22px);z-index:1;display:grid;place-content:center;text-align:center;gap:4px;padding:10%}
-.wheel-center .wc-label{font-size:clamp(10px,2.6cqw,12px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mist-ink)}
-.wheel-center strong{font-family:var(--font-display);font-size:clamp(17px,5.4cqw,26px);font-weight:800;line-height:1.1}
-.wheel-center .wc-count{font-size:clamp(11px,3cqw,13px);color:var(--muted);font-variant-numeric:tabular-nums}
-.wheel-ctrl{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:14px}
 .round-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--graphite);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .15s}
 .round-btn:hover{background:var(--mist-ink)}
 .round-btn:active{transform:scale(.94)}
 .round-btn svg{width:20px;height:20px}
-.wheel-hint{font-size:13px;color:var(--muted)}
-.wheel-detail{background:linear-gradient(165deg,#fff,var(--mist-soft));border-radius:var(--r-xl);padding:26px 24px;display:grid;gap:14px;box-shadow:0 30px 60px -40px rgba(15,31,46,.45)}
-.wd-photo{position:relative;margin:-10px -8px 4px;border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:var(--mist-soft)}
-.wd-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.wd-photo .wd-emoji svg{width:26px;height:26px}
-.wd-photo .wd-emoji{position:absolute;left:12px;bottom:12px;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:rgba(248,250,252,.94);color:var(--action);box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
-.wheel-detail .kind{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mist-ink)}
-.wheel-detail h3{font-size:clamp(24px,5vw,32px);font-weight:800}
-.wheel-detail .ex{background:rgba(255,255,255,.8);border-radius:var(--r-sm);padding:14px 16px;font-size:15px;box-shadow:0 1px 0 rgba(15,31,46,.06)}
-.wheel-detail .ex b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:600}
-.wheel-detail .btn{justify-self:start;border-radius:12px}
-.wheel-detail .swap{animation:fadeUp .4s ease}
+/* Soluções: grade com as seis frentes visíveis */
+.svc-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:0 24px 48px -36px rgba(15,31,46,.45)}
+.svc-photo{margin:0;aspect-ratio:16/9;background:var(--mist-soft)}
+.svc-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.svc-body{padding:20px;display:grid;gap:12px;grid-template-rows:auto 1fr auto}
+.svc-head{display:flex;gap:12px;align-items:center}
+.svc-ico{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--mist-soft);color:var(--action)}
+.svc-ico svg{width:24px;height:24px}
+.svc .kind{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mist-ink)}
+.svc h3{font-size:19px;font-weight:700;line-height:1.2;text-transform:none;letter-spacing:-.01em;color:var(--ink)}
+.svc .ex{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.svc .btn-link{justify-self:start}
+@media(max-width:639px){.svc-photo{display:none}}
+.help-row-sol{margin-top:20px}
 .help-row{margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;color:var(--muted)}
 
 /* How it works: numbered steps with icons joined by a connector line */
@@ -266,11 +247,6 @@ button,input,textarea{font:inherit;color:inherit}
 .photo{position:relative;margin:0;border-radius:var(--r-xl);overflow:hidden;min-height:240px;background:var(--graphite-2)}
 .photo img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
 .photo figcaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(11,24,36,.82);color:#E6EEF4;font-size:13px;padding:10px 12px;border-radius:12px}
-.photo-ph{position:relative;min-height:220px;border-radius:var(--r-xl);overflow:hidden;background:
-  linear-gradient(135deg,rgba(143,179,201,.35),rgba(143,179,201,.05)),
-  repeating-linear-gradient(45deg,var(--graphite-2) 0 14px,#132636 14px 28px);
-  border:1px dashed var(--mist);display:flex;align-items:flex-end;padding:16px}
-.photo-ph span{background:rgba(11,24,36,.85);color:#E6EEF4;font-size:12.5px;padding:8px 10px;border-radius:8px;max-width:100%}
 .diagram{background:linear-gradient(165deg,#1E3A50,var(--graphite-2));border-radius:var(--r-xl);padding:18px;display:grid;gap:6px}
 .diagram .d-row{background:rgba(255,255,255,.05);border-radius:var(--r-sm);padding:10px 12px;--shine:rgba(255,255,255,.12);display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:14px;color:#E6EEF4}
 .diagram .d-dot{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--mist);color:var(--ink);font-weight:800;font-family:var(--font-display);font-size:13px}
@@ -419,13 +395,6 @@ button,input,textarea{font:inherit;color:inherit}
 /* Footer */
 .site-foot{background:#0B1824;color:var(--muted-on-dark);padding-block:56px 28px;font-size:14.5px;overflow:hidden}
 .site-foot .wrap{display:grid;gap:32px}
-.foot-cta{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:300px;display:grid;align-items:end;isolation:isolate}
-.foot-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.foot-cta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(11,24,36,.95) 15%,rgba(11,24,36,.55) 60%,rgba(46,93,122,.25))}
-.foot-cta-body{padding:28px 24px;display:grid;gap:14px;max-width:640px}
-.foot-cta h2{color:#fff;font-size:clamp(24px,5.4vw,36px);font-weight:700}
-.foot-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
-.foot-cta-actions span{font-size:13px;color:#C3D2DD}
 .foot-grid{display:grid;gap:28px 20px;grid-template-columns:1fr 1fr}
 .foot-brand{grid-column:1/-1;display:grid;gap:12px;align-content:start;font-size:14.5px;color:var(--muted-on-dark)}
 .foot-brand strong{color:#fff;font-weight:600}
@@ -490,8 +459,13 @@ button,input,textarea{font:inherit;color:inherit}
   .topbar .bar{min-height:72px}
   .hero-top{grid-template-columns:1.08fr .92fr;align-items:center;min-height:min(640px,calc(100svh - 72px));gap:24px}
   .hero-visual{order:2;height:580px;margin:0 calc(-1 * max(16px,(100vw - 1120px) / 2)) 0 -40px}
-  .hero h1{font-size:clamp(52px,5.4vw,68px)}
+  .hero h1{font-size:clamp(48px,4.6vw,62px);max-width:15ch}
   .hero .stage{margin-top:40px}
+}
+/* Celular: o infinito vira fundo atrás do título, que sobe para o topo da tela */
+@media(max-width:959px){
+  .hero-visual{position:absolute;top:0;right:-30%;width:90%;height:300px;margin:0;opacity:.45;z-index:0}
+  .hero-copy{z-index:1}
 }
 .hero::after{opacity:.22}
 
@@ -596,8 +570,12 @@ html{background:#0B1824}
 /* segmentos: só a foto e o texto */
 .seg figcaption{inset:auto 0 0 0;background:linear-gradient(to top,rgba(11,24,36,.85),rgba(11,24,36,0));color:#F8FAFC;border-radius:0;padding:40px 14px 14px;font-family:var(--font-display);font-weight:700;font-size:16px;box-shadow:none}
 .seg figcaption span{display:none}
-/* Como funciona: só o exemplo */
-.how-media{grid-template-columns:1fr!important;max-width:720px}
+/* Como funciona: foto da conversa + exemplo de primeira entrega */
+.how-photo{margin:0;border-radius:var(--r-xl);overflow:hidden;min-height:240px}
+.how-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.how-media .diagram{align-content:center;gap:10px}
+/* Celular: painel da abertura com só 2 conversas, para não empurrar o resto da página */
+@media(max-width:639px){.app-list li:nth-child(n+3){display:none}}
 /* painel de atendimento */
 .app{background:#F8FAFC;color:#0F1F2E;border-radius:20px;overflow:hidden;box-shadow:0 0 0 1px rgba(143,179,201,.25),0 40px 80px -40px rgba(0,0,0,.8)}
 .app-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#EEF3F7;border-bottom:1px solid #DCE6EE}
@@ -642,20 +620,6 @@ html{background:#0B1824}
 .t-ico svg{width:18px;height:18px}
 @keyframes toastIn{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
 .showcase{position:relative}
-/* soluções: carrossel 3D */
-.cf3d{position:relative;height:250px;perspective:900px;touch-action:pan-y;cursor:grab;user-select:none;overflow:hidden;outline-offset:6px}
-.cf3d.dragging{cursor:grabbing}
-.cf-track{position:absolute;inset:0;transform-style:preserve-3d}
-.cf-item{position:absolute;left:50%;top:50%;width:156px;height:196px;border:0;border-radius:26px;background:#fff;color:var(--ink);display:grid;place-items:center;align-content:center;gap:10px;padding:14px;cursor:pointer;box-shadow:0 0 0 1px var(--line) inset,0 20px 40px -28px rgba(15,31,46,.5);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s,background .4s,color .4s;backface-visibility:hidden}
-.cf3d.dragging .cf-item{transition:background .4s,color .4s}
-.cf-ico{width:76px;height:76px;border-radius:22px;display:grid;place-items:center;background:var(--mist-soft);color:var(--action);transition:inherit}
-.cf-ico svg{width:40px;height:40px}
-.cf-name{font-family:var(--font-display);font-weight:700;font-size:15px;text-align:center;line-height:1.15}
-.cf-kind{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.cf-item.on{background:linear-gradient(160deg,#1E3A50,#0F1F2E);color:#F8FAFC;box-shadow:0 0 0 1px rgba(143,179,201,.35) inset,0 30px 50px -24px rgba(15,31,46,.75),0 0 40px -10px rgba(143,179,201,.5)}
-.cf-item.on .cf-ico{background:rgba(143,179,201,.16);color:#8FB3C9;box-shadow:0 0 30px -4px rgba(143,179,201,.55)}
-.cf-item.on .cf-kind{color:#8FB3C9}
-.cf-dots{display:flex;gap:6px}.cf-dots i{width:6px;height:6px;border-radius:999px;background:var(--line);transition:width .3s,background .3s}.cf-dots i.on{width:20px;background:var(--action)}
 /* modelos por segmento */
 .dm{display:grid;gap:18px}
 .dm-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:rgba(143,179,201,.1);border:1px solid rgba(143,179,201,.16);justify-self:start;max-width:100%;overflow-x:auto}
@@ -689,8 +653,6 @@ html{background:#0B1824}
 .dsum{margin-top:6px;border-radius:14px;background:linear-gradient(160deg,#E6EEF4,#F3F7FA);padding:11px 12px;display:grid;gap:3px;color:#0F1F2E}
 .dsum b{font-size:12.5px;font-weight:700}.dsum span{font-size:11px;color:#4A5D6E}
 .dsum i{font-style:normal;font-size:10.5px;color:#2E6B4A;font-weight:600;margin-top:2px}
-.wd-photo{aspect-ratio:16/8}
-@media(min-width:860px){.wd-photo{aspect-ratio:16/9}}
 
 /* Telas de app nos modelos (v16) */
 .ap{position:relative;height:100%;border-radius:34px;overflow:hidden;display:flex;flex-direction:column;gap:9px;padding:0 12px 12px;font-family:var(--font-body);font-size:10.5px;line-height:1.25;background:#F6F8FA;color:#14212D}
@@ -797,8 +759,8 @@ html{background:#0B1824}
       <div class="hero-visual" aria-hidden="true"><canvas id="hero3d"></canvas></div>
       <div class="hero-copy">
         <p class="kicker"><span class="kdot"></span>Consultoria em tecnologia e tráfego</p>
-        <h1>Atraia clientes.<br><span>Organize o atendimento.</span></h1>
-        <p class="lede">Gestão de tráfego, sites, landing pages, aplicativos, sistemas e automações com IA para conectar o anúncio, o contato e o atendimento.</p>
+        <h1>Mais clientes chegando no WhatsApp.<br><span>E ninguém fica sem&nbsp;resposta.</span></h1>
+        <p class="lede">Anúncio, site e atendimento com IA para negócios locais, num só lugar.</p>
         <div class="actions">
           <a class="btn btn-solid" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
           <a class="text-link" href="#solucoes">Ver soluções</a>
@@ -806,7 +768,7 @@ html{background:#0B1824}
         <ul class="proof">
           <li><b>Grátis</b><span>diagnóstico em 4 minutos</span></li>
           <li><b>WhatsApp</b><span>resumo pronto para enviar</span></li>
-          <li><b>Brasil</b><span>atendimento online</span></li>
+          <li><b>Proposta</b><span>só se fizer sentido</span></li>
         </ul>
       </div>
     </div>
@@ -850,24 +812,12 @@ html{background:#0B1824}
       <div class="section-head">
         <p class="eyebrow">Soluções</p>
         <h2>Seis frentes. Você pode começar por uma ou combinar.</h2>
-        <p>Arraste para o lado e toque numa frente. O diagnóstico abre com ela já marcada.</p>
+        <p>Escolha uma frente e o diagnóstico já abre com ela marcada.</p>
       </div>
-      <div class="wheel-layout">
-        <div>
-          <div class="cf3d" id="wheel" tabindex="0" role="listbox" aria-label="Frentes da LC28. Arraste para os lados ou use as setas."><div class="cf-track" id="wheel-ring"></div></div>
-          <div class="wheel-ctrl">
-            <button type="button" class="round-btn" id="wheel-prev" aria-label="Frente anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
-            <span class="cf-dots" id="cf-dots" aria-hidden="true"></span>
-            <button type="button" class="round-btn" id="wheel-next" aria-label="Próxima frente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-          </div>
-        </div>
-        <div style="display:grid;gap:14px">
-          <article class="wheel-detail" id="wheel-detail" aria-live="polite"></article>
-          <div class="help-row">
-            <span>Não sabe qual faz sentido?</span>
-            <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button>
-          </div>
-        </div>
+      <div class="svc-grid" id="svc-grid"></div>
+      <div class="help-row help-row-sol">
+        <span>Não sabe qual faz sentido?</span>
+        <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button>
       </div>
     </div>
   </section>
@@ -886,6 +836,7 @@ html{background:#0B1824}
         <li class="step"><div class="step-top"><span class="step-ico tilt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="12" rx="2"/><path d="M9 21h6m-3-4v4M10 9l-2 2 2 2m4-4 2 2-2 2"/></svg></span><span class="step-line"></span></div><span class="n">PASSO 3</span><h3>Construir e validar</h3><p>Entregamos em etapas curtas e ajustamos com a sua equipe usando a solução de verdade.</p><ul><li>Entregas curtas</li><li>Ajustes com a equipe</li></ul></li>
       </ol>
       <div class="how-media">
+        <figure class="how-photo"><img src="img/contexto.webp" alt="Duas pessoas conversando sobre a rotina do negócio, com caderno e notebook" loading="lazy"></figure>
         <div class="diagram" aria-label="Exemplo de primeira entrega">
           <p class="eyebrow">Exemplo de primeira entrega</p>
           <div class="d-row tilt"><span class="d-dot">A</span><div>Pedidos chegam pelo WhatsApp<small>Hoje: ninguém sabe quem já respondeu</small></div></div>
@@ -989,9 +940,8 @@ html{background:#0B1824}
       <div class="brief-side">
         <p class="eyebrow">Diagnóstico grátis</p>
         <h2 style="margin-top:10px">Conte o contexto e receba um plano de por onde começar.</h2>
-        <p>São perguntas curtas sobre o seu negócio. O resumo chega no WhatsApp da LC28 já organizado, e a equipe responde com os próximos passos. A proposta comercial só vem depois, se fizer sentido para você.</p>
+        <p>Responda algumas perguntas curtas. O resumo chega organizado no WhatsApp da LC28, e a proposta só vem se fizer sentido para você.</p>
         <ul>
-          <li>Uma pergunta ou grupo curto por tela.</li>
           <li>Você revisa tudo antes de abrir o WhatsApp.</li>
           <li>Não pedimos senhas, documentos pessoais ou dados dos seus clientes.</li>
         </ul>
@@ -1015,18 +965,6 @@ html{background:#0B1824}
 
 <footer class="site-foot">
   <div class="wrap">
-    <div class="foot-cta">
-      <img src="img/contexto.webp" alt="" loading="lazy">
-      <div class="foot-cta-body">
-        <p class="eyebrow">Próximo passo</p>
-        <h2>Conte o que está travando. A gente ajuda a definir por onde começar.</h2>
-        <div class="foot-cta-actions">
-          <a class="btn btn-gradient" href="#briefing" data-start="">Fazer diagnóstico grátis</a>
-          <span>Cerca de 4 minutos · termina no WhatsApp</span>
-        </div>
-      </div>
-    </div>
-
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="foot-brand-top">
@@ -1098,6 +1036,7 @@ function onBriefingSubmit(payload) {
 // [PENDENTE] Cases autorizados. Troque os placeholders pelos dados reais e defina image (URL do print).
 const CASES = [
   // ilustrativo: true mostra o selo "Case ilustrativo". Troque pelos cases reais e mude para false.
+  // Enquanto TODOS forem ilustrativos, a seção Resultados e os links do menu ficam escondidos.
   { ilustrativo: true, title: "Clínica de estética", servicos: "Tráfego pago + landing page", image: "img/case-clinica.webp",
     objetivo: "Encher a agenda de avaliações", periodo: "3 meses", investimento: "R$ 2.500/mês em mídia", metrica: "118 avaliações agendadas",
     feito: "Campanha no Instagram para mulheres num raio de 5 km, com landing page mostrando os horários livres e contato direto no WhatsApp. Os criativos eram trocados a cada 15 dias conforme o custo por conversa." },
@@ -1635,58 +1574,10 @@ document.querySelectorAll(".dm-tab").forEach(t => t.addEventListener("click", ()
 /* Investimento: mensalidade */
 if (MENSALIDADE_TRAFEGO) $("#of-price").textContent = MENSALIDADE_TRAFEGO + " por mês";
 
-/* Soluções: roda das frentes */
-const ICONS = {"trafego": "<path d=\"M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1Z\"/><path d=\"M15.5 8.5a5 5 0 0 1 0 7\"/><path d=\"M18.5 5.5a9 9 0 0 1 0 13\"/>", "site": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M7 6.5h.01M10 6.5h.01\"/>", "landing": "<path d=\"M6 3h9l4 4v14H6z\"/><path d=\"M9 12h7M9 16h4\"/><path d=\"M14 3v4h4\"/>", "app": "<rect x=\"7\" y=\"2.5\" width=\"10\" height=\"19\" rx=\"2.5\"/><path d=\"M11 18.5h2\"/>", "sistema": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/>", "ia": "<path d=\"M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z\"/><path d=\"M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z\"/>"};
-(function () {
-  const stage = $("#wheel"), track = $("#wheel-ring"), detail = $("#wheel-detail"), dots = $("#cf-dots");
-  const N = SERVICES.length;
-  let cur = 0, pos = 0, dragX = null, startPos = 0, moved = false;
-  track.innerHTML = SERVICES.map((s, i) => `<button type="button" class="cf-item" role="option" data-i="${i}" aria-label="${esc(s.name)}"><span class="cf-ico" aria-hidden="true">${s.emoji}</span><span class="cf-name">${esc(s.short)}</span><span class="cf-kind">${esc(s.kind)}</span></button>`).join("");
-  dots.innerHTML = SERVICES.map(() => "<i></i>").join("");
-  const items = [...track.children], dl = [...dots.children];
-  const mod = (n, m) => ((n % m) + m) % m;
-  function layout(p) {
-    const w = stage.clientWidth, gap = Math.min(w * 0.36, 190);
-    items.forEach((el, i) => {
-      let o = i - p; o = mod(o + N / 2, N) - N / 2;
-      const a = Math.abs(o);
-      el.style.transform = `translate(-50%,-50%) translateX(${o * gap}px) translateZ(${-a * 140}px) rotateY(${Math.max(-60, Math.min(60, -o * 42))}deg) scale(${1 - Math.min(a, 2) * 0.08})`;
-      el.style.opacity = a > 2.4 ? 0 : 1 - Math.min(a, 2) * 0.28;
-      el.style.zIndex = 10 - Math.round(a * 2);
-      el.classList.toggle("on", a < 0.5);
-      el.tabIndex = a < 0.5 ? 0 : -1;
-    });
-  }
-  function show() {
-    pos = cur; stage.classList.remove("dragging"); layout(pos);
-    const a = mod(cur, N), s = SERVICES[a];
-    dl.forEach((d, i) => d.classList.toggle("on", i === a));
-    items.forEach((el, i) => el.setAttribute("aria-selected", i === a));
-    detail.innerHTML = `<div class="swap" style="display:grid;gap:14px"><figure class="wd-photo"><img src="${s.img}" alt="" loading="lazy"><span class="wd-emoji" aria-hidden="true">${s.emoji}</span></figure><p class="kind">${esc(s.kind)}</p><h3>${esc(s.name)}</h3>` +
-      `<p class="ex"><b>Exemplo</b>${esc(s.ex)}</p>` +
-      `<button type="button" class="btn btn-dark" data-pick="${s.id}">Começar com ${esc(s.short.toLowerCase().replace(/\bia\b/, "IA"))}</button></div>`;
-  }
-  function goTo(i) { let d = mod(i - mod(cur, N), N); if (d > N / 2) d -= N; cur += d; show(); }
-  $("#wheel-prev").addEventListener("click", () => { cur--; show(); });
-  $("#wheel-next").addEventListener("click", () => { cur++; show(); });
-  stage.addEventListener("keydown", e => {
-    if (e.key === "ArrowRight") { e.preventDefault(); cur++; show(); }
-    if (e.key === "ArrowLeft") { e.preventDefault(); cur--; show(); }
-  });
-  track.addEventListener("click", e => { const b = e.target.closest(".cf-item"); if (b && !moved) goTo(+b.dataset.i); });
-  stage.addEventListener("pointerdown", e => { dragX = e.clientX; startPos = pos; moved = false; });
-  stage.addEventListener("pointermove", e => {
-    if (dragX === null) return;
-    const dx = e.clientX - dragX;
-    if (!moved && Math.abs(dx) < 6) return;
-    if (!moved) { moved = true; stage.classList.add("dragging"); try { stage.setPointerCapture(e.pointerId); } catch (_) {} }
-    pos = startPos - dx / Math.min(stage.clientWidth * 0.36, 190); layout(pos);
-  });
-  const end = () => { if (dragX === null) return; if (moved) { cur = Math.round(pos); show(); } dragX = null; setTimeout(() => { moved = false; }, 0); };
-  stage.addEventListener("pointerup", end); stage.addEventListener("pointercancel", end);
-  addEventListener("resize", () => layout(pos));
-  show();
-})();
+/* Soluções: grade das frentes */
+$("#svc-grid").innerHTML = SERVICES.map(s => `<article class="svc"><figure class="svc-photo"><img src="${s.img}" alt="" loading="lazy"></figure>` +
+  `<div class="svc-body"><div class="svc-head"><span class="svc-ico" aria-hidden="true">${s.emoji}</span><div><p class="kind">${esc(s.kind)}</p><h3>${esc(s.name)}</h3></div></div>` +
+  `<p class="ex">${esc(s.ex)}</p><button type="button" class="btn-link" data-pick="${s.id}">Começar com ${esc(s.short.toLowerCase().replace(/\bia\b/, "IA"))} →</button></div></article>`).join("");
 
 /* Faixa de segmentos */
 $("#segs-track").innerHTML = [
@@ -1696,6 +1587,11 @@ $("#segs-track").innerHTML = [
 
 /* Resultados: carrossel de cases */
 (function () {
+  // Sem nenhum case real, a seção e os links "Resultados" ficam escondidos (número fictício tira credibilidade)
+  if (CASES.every(c => c.ilustrativo)) {
+    document.querySelectorAll('#resultados, a[href="#resultados"]').forEach(el => el.hidden = true);
+    return;
+  }
   const imgs = $("#ct-images"), N = CASES.length;
   const tones = [["#E6EEF4", "#CFE0EB"], ["#EEF3F7", "#CFE0EB"], ["#DCE6EE", "#B5CDDC"]];
   imgs.innerHTML = CASES.map((c, i) => `<div class="ct-img" data-i="${i}">` + (c.image
@@ -1755,7 +1651,7 @@ $("#segs-track").innerHTML = [
 })();
 
 if (WHATSAPP_NUMBER) $("#foot-wa").textContent = "+" + WHATSAPP_NUMBER.replace(/\D/g, "");
-if (!WHATSAPP_NUMBER) { const d = $("#dev-note"); d.hidden = false; d.textContent = "Prévia: número do WhatsApp ainda é provisório. Fotos geradas por IA e cases ilustrativos."; }
+if (!WHATSAPP_NUMBER) { const d = $("#dev-note"); d.hidden = false; d.textContent = "Prévia: número do WhatsApp ainda é provisório. Fotos geradas por IA."; }
 
 /* Menu do celular */
 (function () {

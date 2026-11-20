@@ -8,8 +8,7 @@ Arquivo único (`index.html`), sem dependências além das fontes do Google. Pod
 |---|---|
 | Número comercial do WhatsApp | `WHATSAPP_NUMBER`, só dígitos com DDI e DDD (ex.: `5511999998888`). Vazio = abre o WhatsApp sem destinatário e mostra aviso. |
 | Salvar o briefing antes do WhatsApp | `onBriefingSubmit(payload)`. É chamado no clique, antes de abrir o WhatsApp. Use `navigator.sendBeacon` ou `fetch(..., {keepalive:true})` para não travar o redirecionamento. |
-| Cases autorizados | Array `CASES`: título, `image` (URL do print), objetivo, período, investimento, métrica e o que foi feito. |
-| Foto contextual | Bloco `.photo-ph` na seção "Como funciona". Trocar por `<img>`. |
+| Cases autorizados | Array `CASES`: título, `image` (URL do print), objetivo, período, investimento, métrica e o que foi feito. Enquanto todos tiverem `ilustrativo: true`, a seção Resultados e os links do menu ficam escondidos. |
 
 ## Como o briefing decide as perguntas
 
@@ -28,6 +27,7 @@ Arquivo único (`index.html`), sem dependências além das fontes do Google. Pod
 - Grafismos: `padrao-continuidade.svg` nas faixas escuras e na abertura, `textura-pontos.svg` nas faixas claras, sempre na lateral e em baixa opacidade.
 - O infinito 3D da abertura usa Three.js r128 e GSAP 3.12.5 (ScrollTrigger) do cdnjs. Sem internet ou WebGL a página funciona sem o 3D; com "reduzir movimento" ele fica parado.
 - Publique a pasta inteira (index.html + img/).
+- Arquivo único: depois de mexer no `index.html`, rode `python gerar-arquivo-unico.py` para atualizar o `LC28-landing-completa.html` (imagens embutidas, abre sem a pasta img/).
 
 ## Captação de leads (atualização)
 
