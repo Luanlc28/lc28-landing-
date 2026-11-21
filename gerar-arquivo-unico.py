@@ -11,7 +11,9 @@ def embutir(m):
     assert arq.exists(), f"imagem não encontrada: {arq}"
     return f"data:{tipos[arq.suffix]};base64," + base64.b64encode(arq.read_bytes()).decode()
 
-saida, n = re.subn(r"img/[\w.-]+\.(?:webp|png|svg|jpg)", embutir, html)
-assert "img/" not in re.sub(r"data:[^\"')]+", "", saida), "sobrou referência a img/"
+# (?<!/) pula URLs completas, como a og:image (https://lc28.com.br/img/og.jpg), que precisam continuar como link.
+REF = r"(?<!/)img/[\w.-]+\.(?:webp|png|svg|jpg)"
+saida, n = re.subn(REF, embutir, html)
+assert not re.search(REF, saida), "sobrou referência a img/"
 (raiz / "LC28-landing-completa.html").write_text(saida, encoding="utf-8")
 print(f"{n} imagens embutidas, {len(saida) / 1e6:.1f} MB")

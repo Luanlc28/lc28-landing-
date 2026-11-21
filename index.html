@@ -8,11 +8,14 @@
 <meta property="og:description" content="Anúncio, site e atendimento com IA para negócios locais. Diagnóstico grátis em 4 minutos.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<!-- [PENDENTE] Quando tiver domínio, troque pela URL completa da imagem (https://seu-dominio + o caminho abaixo). WhatsApp e Instagram exigem URL completa. -->
-<meta property="og:image" content="img/og.jpg">
+<meta property="og:url" content="https://lc28.com.br/">
+<meta property="og:image" content="https://lc28.com.br/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lc28.com.br/img/og.jpg">
+<link rel="canonical" href="https://lc28.com.br/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"LC28","url":"https://lc28.com.br/","logo":"https://lc28.com.br/img/favicon.png","image":"https://lc28.com.br/img/og.jpg","description":"Gestão de tráfego pago, sites, landing pages e automação com IA no WhatsApp para negócios locais.","areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://instagram.com/lc28.tech"]}</script>
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <meta name="theme-color" content="#0B1824">
@@ -101,7 +104,7 @@ button,input,textarea{font:inherit;color:inherit}
 @media(min-width:860px){.logo img{height:42px}}
 .logo b{font-weight:800}
 .topbar nav{display:none;gap:28px;font-size:14px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-.topbar nav a,.mobile-menu a{text-decoration:none;color:rgba(255,255,255,.6);transition:color .15s}
+.topbar nav a,.mobile-menu a{text-decoration:none;color:rgba(255,255,255,.86);transition:color .15s}
 .topbar nav a:hover,.mobile-menu a:hover{color:#fff}
 .topbar .cta{display:none;min-height:40px;padding:0 18px;font-size:14px;border-radius:12px}
 .menu-btn{display:grid;place-items:center;width:44px;height:44px;border:0;background:none;color:#fff;cursor:pointer;border-radius:10px}
@@ -580,6 +583,23 @@ html{background:#0B1824}
 .how-photo{margin:0;border-radius:var(--r-xl);overflow:hidden;min-height:240px}
 .how-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .how-media .diagram{align-content:center;gap:10px}
+/* Selo do painel ilustrativo, mais visível */
+.flow-caption{display:table;margin:14px auto 0;padding:6px 12px;border-radius:999px;background:rgba(143,179,201,.14);border:1px solid rgba(143,179,201,.3);color:#C3D2DD;font-size:12.5px}
+/* Diferenciais na seção Investimento */
+.o2-trust{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
+.o2-trust li{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--ink)}
+.o2-trust li::before{content:"✓";color:var(--action);font-weight:700}
+/* CTA fixo no celular */
+.m-cta{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:14px;background:var(--action);color:#F8FAFC;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 14px 32px -12px rgba(11,24,36,.7);transform:translateY(160%);transition:transform .3s ease}
+.m-cta.on{transform:none}
+@media(min-width:960px){.m-cta{display:none}}
+@media(prefers-reduced-motion:reduce){.m-cta{transition:none}}
+/* Envio pelo site no fim do diagnóstico */
+.site-status{font-size:14px;color:var(--muted)}
+.site-status:empty{display:none}
+.site-status.ok{color:#2E6B4A;font-weight:600}
+.site-status.err{color:var(--warn-ink)}
+.send .privacy{font-size:13px;color:var(--muted)}
 .demo-body .dm-for{font-size:14px;color:#A9BDCB}
 .demo-body .dm-for b{color:#8FB3C9;font-weight:600}
 /* Celular: painel da abertura com só 2 conversas, para não empurrar o resto da página */
@@ -802,7 +822,7 @@ html{background:#0B1824}
           </div>
         </div>
         <div class="toast" aria-hidden="true"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16M7 15l4-5 3 2 5-6"/></svg></span><div><b>Novo contato via Meta Ads</b><span>Mariana S. · respondido em 1 min</span></div></div>
-        <figcaption class="flow-caption">Interface ilustrativa · do anúncio ao atendimento organizado</figcaption>
+        <figcaption class="flow-caption">Exemplo ilustrativo · nomes e números fictícios</figcaption>
       </figure>
       </div>
     </div>
@@ -918,6 +938,11 @@ html{background:#0B1824}
         <p class="eyebrow">Investimento</p>
         <h2>Sem letra miúda: você sabe o que paga e para quem.</h2>
       </div>
+      <ul class="o2-trust">
+        <li>Sem fidelidade no tráfego</li>
+        <li>Domínio e contas no nome da sua empresa</li>
+        <li id="of-host">Hospedagem e manutenção com valor fixo na proposta</li>
+      </ul>
       <div class="offer2">
         <div class="o2-items">
           <div><span>Tráfego pago</span><b id="of-price">A partir de R$ 1.500 por mês</b><em>Criativos, ajustes e relatório mensal. A verba dos anúncios você paga direto à Meta. Sem fidelidade.</em></div>
@@ -981,12 +1006,12 @@ html{background:#0B1824}
           <a class="foot-logo" href="#topo" aria-label="LC28, voltar ao início"><img src="img/logo-principal-negativa.svg" alt="LC28" width="110" height="36"></a>
           <div class="foot-social">
             <a href="https://instagram.com/lc28.tech" target="_blank" rel="noopener" aria-label="Instagram da LC28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
-            <a href="#briefing" data-start="" aria-label="WhatsApp da LC28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></a>
+            <a id="foot-wa-ico" href="#briefing" data-start="" aria-label="WhatsApp da LC28" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></a>
           </div>
         </div>
         <p>Tecnologia e tráfego para atrair clientes e organizar sua operação. <strong>Atendimento online para todo o Brasil.</strong></p>
         <ul class="foot-contact">
-          <li><span>WhatsApp</span><strong id="foot-wa">Número a configurar</strong></li>
+          <li id="foot-wa-li" hidden><span>WhatsApp</span><a id="foot-wa" href="#" target="_blank" rel="noopener"></a></li>
           <li><span>Instagram</span><a href="https://instagram.com/lc28.tech" target="_blank" rel="noopener">@lc28.tech</a></li>
         </ul>
       </div>
@@ -1011,12 +1036,12 @@ html{background:#0B1824}
 
     <div class="foot-sign" aria-hidden="true"><svg viewBox="16 14 438 136" preserveAspectRatio="xMinYMin meet"><defs><linearGradient id="fsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC" stop-opacity=".22"/><stop offset=".55" stop-color="#8FB3C9" stop-opacity=".3"/><stop offset="1" stop-color="#2E5D7A" stop-opacity=".28"/></linearGradient></defs><path d="M 23 0 L 50 0 L 27 69 L 69 69 L 82 92 L 0 92 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(21 31) scale(1)"/><path d="M 101 15 L 82 34 C 72 22 59 20 48 24 C 31 30 21 45 24 60 C 27 77 52 81 73 67 L 89 83 C 69 100 37 101 17 87 C -2 73 -4 47 8 27 C 27 -3 72 -10 101 15 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(115 31) scale(1)"/><path d="M 16 28 C 24 10 44 0 67 0 C 92 0 106 11 106 28 C 105 50 86 64 64 70 C 47 75 36 81 32 90 L 82 90 L 73 112 L 0 112 C 4 87 20 68 43 59 L 61 52 C 77 46 82 38 81 31 C 80 23 73 20 62 20 C 49 20 41 25 37 32 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(232 19) scale(1)"/><path d="M 8 60 C 8 26 28 4 60 1 C 88 -2 108 10 108 31 C 108 45 102 54 93 60 C 103 66 108 75 108 87 C 108 104 91 116 65 116 C 40 116 22 103 15 87 C 11 77 14 67 22 61 Z M 35 54 C 44 49 57 47 69 45 C 83 43 88 38 88 31 C 88 23 80 20 67 20 C 48 20 38 30 35 54 Z M 35 79 C 40 90 52 95 66 95 C 80 95 87 90 87 81 C 87 73 80 69 71 69 C 58 70 45 74 35 79 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(341 19) scale(1)"/></svg></div>
     <div class="foot-bottom">
-      <span>© 2026 LC28 · <span class="todo">CNPJ a informar</span></span>
+      <span>© 2026 LC28<span id="foot-cnpj" hidden></span> · <a href="politica-de-privacidade.html">Política de privacidade</a></span>
       <span>Não pedimos senhas, documentos pessoais ou dados dos seus clientes.</span>
     </div>
-    <p class="dev-note" id="dev-note" hidden></p>
   </div>
 </footer>
+<a class="m-cta" id="m-cta" href="#briefing" data-start="" aria-hidden="true" tabindex="-1">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1030,17 +1055,40 @@ html{background:#0B1824}
 // Enquanto estiver vazio, o botão abre o WhatsApp sem destinatário e a página mostra um aviso.
 const WHATSAPP_NUMBER = "";
 
+// [PENDENTE] CNPJ da LC28 para o rodapé. Ex.: "12.345.678/0001-90". Vazio = não aparece.
+const CNPJ = "";
+
+// [PENDENTE] Mensalidade de hospedagem e manutenção. Ex.: "R$ 99". Vazio = "valor fixo na proposta".
+const MENSALIDADE_HOSPEDAGEM = "";
+
+// Leads do diagnóstico vão para a tabela lc28_leads no Supabase (projeto "Luanlc28's Project").
+// A chave abaixo é pública de propósito: pela regra de segurança (RLS) ela só GRAVA, não lê nem apaga.
+// Para ver os leads: painel do Supabase > Table Editor > lc28_leads.
+const LEADS_URL = "https://eiczybigaqyilmhdyley.supabase.co/rest/v1/lc28_leads";
+const LEADS_KEY = "sb_publishable_z_c5ebn27hy6itbpU_NRvQ_RvH1lyiU";
+
 // [PENDENTE] Mensalidade fixa da gestão de tráfego. Ex.: "R$ 1.500". Vazio mostra "sob consulta".
 const MENSALIDADE_TRAFEGO = "A partir de R$ 1.500";
 
-// [PENDENTE] Salvar o briefing antes do redirecionamento.
-// Chamado no clique de "Abrir briefing no WhatsApp", ANTES de o WhatsApp abrir.
-// Não bloqueia a navegação: para salvar, use navigator.sendBeacon(url, body) ou
-// fetch(url, {method:"POST", body, keepalive:true}). Ex.:
-//   navigator.sendBeacon("https://api.lc28.com.br/briefings", JSON.stringify(payload));
-function onBriefingSubmit(payload) {
-  // payload = { answers, message, services, createdAt }
-  // Hoje o briefing fica só no WhatsApp.
+// Salva o diagnóstico no Supabase. Chamado ao abrir o WhatsApp (canal "whatsapp", antes do envio,
+// para não perder quem desiste no app) e no botão de envio pelo site (canal "site").
+// fetch com keepalive: a gravação termina mesmo se a página trocar para o WhatsApp.
+let lastSaved = "";
+function onBriefingSubmit(payload, canal = "whatsapp") {
+  const a = payload.answers, key = canal + payload.message;
+  if (key === lastSaved) return Promise.resolve({ ok: true }); // mesmo resumo, mesmo canal: não duplica
+  const q = new URLSearchParams(location.search);
+  const body = JSON.stringify({
+    canal,
+    nome: String(a.nome || "").slice(0, 200) || null,
+    contato: [a.telefone, a.email].filter(Boolean).join(" · ").slice(0, 200) || null,
+    servicos: payload.services.slice(0, 20),
+    mensagem: payload.message.slice(0, 10000),
+    respostas: a,
+    origem: [q.get("utm_source"), q.get("utm_campaign"), document.referrer].filter(Boolean).join(" · ").slice(0, 500) || null,
+  });
+  return fetch(LEADS_URL, { method: "POST", keepalive: true, headers: { apikey: LEADS_KEY, "Content-Type": "application/json", Prefer: "return=minimal" }, body })
+    .then(r => { if (r.ok) lastSaved = key; return r; });
 }
 
 // [PENDENTE] Cases autorizados. Troque os placeholders pelos dados reais e defina image (URL do print).
@@ -1065,7 +1113,7 @@ const FAQ = {
     ["A verba dos anúncios está incluída?", "Não. A verba é paga direto à Meta ou ao Google, no seu cartão. A LC28 cobra só a gestão das campanhas."],
     ["Tem fidelidade?", "No tráfego pago, não. Você continua porque está dando resultado, e pode parar quando quiser."],
     ["O site e a página ficam no meu nome?", "Sim. Domínio, site, página e contas de anúncio ficam no nome da sua empresa. Se um dia sair da LC28, leva tudo com você."],
-    ["Depois de pronto, tem mensalidade?", "Sim, um plano mensal de hospedagem e manutenção, para o site ficar no ar, seguro e atualizado. O valor vem detalhado na proposta."],
+    ["Depois de pronto, tem mensalidade?", `Sim, um plano mensal de hospedagem e manutenção, para o site ficar no ar, seguro e atualizado. ${MENSALIDADE_HOSPEDAGEM ? `Custa ${MENSALIDADE_HOSPEDAGEM} por mês.` : "O valor fixo vem na proposta."}`],
   ],
   "Prazo e resultado": [
     ["Em quanto tempo fica pronto?", "Landing page em cerca de 7 dias e site em cerca de 15, contados a partir do envio dos textos e fotos. Aplicativo, sistema e automação têm prazo fechado na proposta."],
@@ -1196,7 +1244,7 @@ let errors = {};
 function blankState() {
   return { objetivo: "", objetivoOutro: "", servicos: [], prioridade: "", travando: "",
     empresa: "", segmento: "", regiao: "", equipe: "", usuarios: "", canais: [], canalOutro: "",
-    presenca: "", prazo: "", investimento: "", nome: "", papel: "", decisao: "", outroPapel: "", outroNome: "", email: "" };
+    presenca: "", prazo: "", investimento: "", nome: "", papel: "", decisao: "", outroPapel: "", outroNome: "", email: "", telefone: "" };
 }
 function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify({ S, cur })); } catch (e) {} }
 function load() {
@@ -1258,12 +1306,13 @@ function screens() {
       `<div class="split two">${text("nome", "Seu nome")}${text("papel", "Seu papel na empresa", { ph: "Ex.: sócia, gerente comercial" })}</div>` +
       choice("decisao", "Você decide sobre o projeto?", DECISAO, { stack: true }) +
       (S.decisao && S.decisao !== DECISAO[0] ? `<div class="split two">${text("outroPapel", "Papel da outra pessoa", { ph: "Ex.: sócio, diretor financeiro" })}${text("outroNome", "Nome dela", { optional: true })}</div>` : "") +
-      text("email", "E-mail", { optional: true, type: "email", ph: "voce@empresa.com.br" }) +
-      `<p class="callout">Seu número aparece para a LC28 quando você enviar a mensagem no WhatsApp. Não precisa digitar aqui.</p>`,
+      `<div class="split two">${text("telefone", "Seu WhatsApp", { optional: true, type: "tel", ph: "(11) 99999-8888" })}${text("email", "E-mail", { optional: true, type: "email", ph: "voce@empresa.com.br" })}</div>` +
+      `<p class="callout">Se enviar pelo WhatsApp, seu número já chega para a LC28. Preencha se preferir enviar pelo site.</p>`,
     valid: () => {
       let ok = need("nome", "Informe seu nome.") & need("papel", "Informe seu papel.") & need("decisao", "Escolha uma opção.");
       if (S.decisao && S.decisao !== DECISAO[0]) ok &= need("outroPapel", "Informe o papel da outra pessoa.");
       if (S.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(S.email)) ok &= fail("email", "Confira o e-mail. Ele está incompleto.");
+      if (S.telefone && S.telefone.replace(/\D/g, "").length < 10) ok &= fail("telefone", "Confira o número com DDD.");
       return !!ok;
     } });
   list.push({ id: "revisao", group: G5, render: renderReview, valid: () => true });
@@ -1284,7 +1333,7 @@ function text(k, label, o = {}) {
   const desc = errors[k] ? ` aria-describedby="err-${k}" aria-invalid="true"` : "";
   const input = o.area
     ? `<textarea id="${id}" data-k="${k}" placeholder="${esc(o.ph || "")}"${aria}${desc}>${v}</textarea>`
-    : `<input id="${id}" type="${o.type || "text"}" data-k="${k}" value="${v}" placeholder="${esc(o.ph || "")}" autocomplete="${o.type === "email" ? "email" : "off"}"${aria}${desc}>`;
+    : `<input id="${id}" type="${o.type || "text"}" data-k="${k}" value="${v}" placeholder="${esc(o.ph || "")}" autocomplete="${o.type === "email" ? "email" : o.type === "tel" ? "tel" : "off"}"${aria}${desc}>`;
   return `<div class="field${errors[k] ? " invalid" : ""}">${label ? `<label for="${id}">${esc(label)}${optTag(o)}</label>` : ""}${o.hint ? `<p class="hint">${esc(o.hint)}</p>` : ""}${input}${errHtml(k)}</div>`;
 }
 
@@ -1337,7 +1386,7 @@ function summaryBlocks() {
     const rows = [...(id === "landing" ? landingOfferNote() : []), ...serviceAnswers(id)];
     blocks.push({ title: svcName(id), go: "svc-" + id, rows });
   });
-  blocks.push({ title: "Contato", go: "contato", rows: [["Responsável", respTxt()], ["E-mail", S.email]] });
+  blocks.push({ title: "Contato", go: "contato", rows: [["Responsável", respTxt()], ["WhatsApp", S.telefone], ["E-mail", S.email]] });
   return blocks.map(b => ({ ...b, rows: b.rows.filter(([, v]) => v) }));
 }
 function canaisTxt() { return S.canais.map(c => c === "Outro" && S.canalOutro ? S.canalOutro : c).join(", "); }
@@ -1357,6 +1406,7 @@ function buildMessage() {
   L.push("Olá, LC28! Fiz o diagnóstico grátis pelo site.", "");
   add("Empresa", [S.empresa, S.segmento, S.regiao].filter(Boolean).join(" · "));
   add("Responsável", respTxt());
+  add("WhatsApp", S.telefone);
   add("E-mail", S.email);
   add("Equipe", [S.equipe, needsUsers() && S.usuarios ? `${S.usuarios} vão usar a solução` : ""].filter(Boolean).join(" · "));
   add("Serviços de interesse", S.servicos.map(svcName).join(", "));
@@ -1384,10 +1434,16 @@ function renderReview() {
     `<div class="review">${blocks.map(b => `<div class="rv"><div class="rv-head"><h4>${esc(b.title)}</h4><button type="button" class="btn-link" data-go="${b.go}">Corrigir</button></div>` +
       (b.rows.length ? `<dl>${b.rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : `<p class="hint" style="color:var(--muted);font-size:14px">Sem respostas.</p>`) + `</div>`).join("")}</div>` +
     `<div class="field"><p style="font-weight:600;font-size:15.5px">Mensagem que vai para o WhatsApp</p><div class="msg" id="msg-preview">${esc(msg)}</div></div>` +
-    (WHATSAPP_NUMBER ? "" : `<p class="callout warn">Número comercial da LC28 ainda não configurado. Nesta prévia, o WhatsApp abre pedindo para escolher o contato.</p>`) +
-    `<div class="send"><a class="btn btn-dark" id="wa-btn" href="${esc(waUrl(msg))}" target="_blank" rel="noopener">Enviar diagnóstico no WhatsApp</a>` +
-    `<p class="support">Confira o resumo. Ao abrir o WhatsApp, toque em Enviar para compartilhar o diagnóstico com a LC28.</p>` +
-    `<button type="button" class="btn-link" id="copy-btn" style="justify-self:start">Copiar mensagem</button></div>`;
+    // Sem número comercial configurado, o envio é só pelo site (nunca abre o WhatsApp sem destinatário).
+    `<div class="send">` + (WHATSAPP_NUMBER
+      ? `<a class="btn btn-dark" id="wa-btn" href="${esc(waUrl(msg))}" target="_blank" rel="noopener">Enviar diagnóstico no WhatsApp</a>` +
+        `<p class="support">Ao abrir o WhatsApp, toque em Enviar para compartilhar o diagnóstico com a LC28.</p>` +
+        `<button type="button" class="btn-link" id="site-btn" style="justify-self:start">Prefiro enviar pelo site</button>`
+      : `<button type="button" class="btn btn-dark" id="site-btn">Enviar diagnóstico</button>` +
+        `<p class="support">A LC28 responde pelo WhatsApp ou e-mail que você informou.</p>`) +
+    `<p class="site-status" id="site-status" role="status" aria-live="polite"></p>` +
+    `<button type="button" class="btn-link" id="copy-btn" style="justify-self:start">Copiar mensagem</button>` +
+    `<p class="privacy">Ao enviar, você concorda com a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">política de privacidade</a>.</p></div>`;
 }
 
 /* ==========================================================
@@ -1489,7 +1545,22 @@ $("#briefing").addEventListener("click", e => {
   else if (t.id === "wa-btn") {
     const message = buildMessage();
     t.href = waUrl(message);
-    try { onBriefingSubmit({ answers: { ...S }, message, services: S.servicos.map(svcName), createdAt: new Date().toISOString() }); } catch (err) { console.error(err); }
+    try { onBriefingSubmit({ answers: { ...S }, message, services: S.servicos.map(svcName), createdAt: new Date().toISOString() }).catch(console.error); } catch (err) { console.error(err); }
+  }
+  else if (t.id === "site-btn") {
+    const st = $("#site-status");
+    if (!S.telefone && !S.email) {
+      st.className = "site-status err";
+      st.innerHTML = `Para a LC28 responder, informe seu WhatsApp ou e-mail. <button type="button" class="btn-link" data-go="contato">Informar contato</button>`;
+      return;
+    }
+    t.disabled = true; st.className = "site-status"; st.textContent = "Enviando…";
+    const message = buildMessage();
+    onBriefingSubmit({ answers: { ...S }, message, services: S.servicos.map(svcName), createdAt: new Date().toISOString() }, "site")
+      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status);
+        st.className = "site-status ok"; st.textContent = "Recebido! A LC28 vai responder pelo contato que você informou."; t.hidden = true; })
+      .catch(err => { console.error(err); t.disabled = false;
+        st.className = "site-status err"; st.textContent = "Não foi possível enviar agora. Tente de novo ou use Copiar mensagem."; });
   }
   else if (t.id === "copy-btn") {
     const msg = buildMessage();
@@ -1659,8 +1730,25 @@ $("#segs-track").innerHTML = [
   show(true);
 })();
 
-if (WHATSAPP_NUMBER) $("#foot-wa").textContent = "+" + WHATSAPP_NUMBER.replace(/\D/g, "");
-if (!WHATSAPP_NUMBER) { const d = $("#dev-note"); d.hidden = false; d.textContent = "Prévia: número do WhatsApp ainda é provisório. Fotos geradas por IA."; }
+if (WHATSAPP_NUMBER) {
+  const n = WHATSAPP_NUMBER.replace(/\D/g, ""), url = "https://wa.me/" + n;
+  const ico = $("#foot-wa-ico"); ico.href = url; ico.target = "_blank"; ico.rel = "noopener"; ico.removeAttribute("data-start"); ico.hidden = false;
+  const fw = $("#foot-wa"); fw.href = url; fw.textContent = "+" + n.replace(/^(\d{2})(\d{2})(\d{4,5})(\d{4})$/, "$1 $2 $3-$4"); $("#foot-wa-li").hidden = false;
+}
+if (CNPJ) { const c = $("#foot-cnpj"); c.textContent = " · CNPJ " + CNPJ; c.hidden = false; }
+if (MENSALIDADE_HOSPEDAGEM) $("#of-host").textContent = `Hospedagem e manutenção: ${MENSALIDADE_HOSPEDAGEM}/mês`;
+
+/* CTA fixo no celular: aparece depois que o botão da abertura sai da tela; some no diagnóstico e no rodapé */
+(function () {
+  const cta = $("#m-cta"); if (!("IntersectionObserver" in window)) return;
+  const seen = new Map();
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => seen.set(e.target, e.isIntersecting));
+    const show = ![...seen.values()].some(Boolean);
+    cta.classList.toggle("on", show); cta.setAttribute("aria-hidden", String(!show)); cta.tabIndex = show ? 0 : -1;
+  });
+  [".hero .actions", "#briefing-sec", ".site-foot"].forEach(q => { const el = $(q); if (el) { seen.set(el, true); io.observe(el); } });
+})();
 
 /* Menu do celular */
 (function () {

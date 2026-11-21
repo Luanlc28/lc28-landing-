@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.lc28.com.br" }],
+      "destination": "https://lc28.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}
