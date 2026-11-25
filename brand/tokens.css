@@ -1,0 +1,24 @@
+:root {
+  --lc28-color-grafite: #0F1F2E;
+  --lc28-color-azul-profundo: #2E5D7A;
+  --lc28-color-azul-nevoa: #8FB3C9;
+  --lc28-color-cinza-claro: #E6EEF4;
+  --lc28-color-off-white: #F8FAFC;
+  --lc28-font-heading: "Manrope", Arial, sans-serif;
+  --lc28-font-body: "Inter", Arial, sans-serif;
+  --lc28-space-xs: 4px;
+  --lc28-space-sm: 8px;
+  --lc28-space-md: 16px;
+  --lc28-space-lg: 24px;
+  --lc28-space-xl: 40px;
+  --lc28-space-2xl: 64px;
+  --lc28-radius-small: 8px;
+  --lc28-radius-medium: 16px;
+  --lc28-radius-large: 24px;
+  --lc28-text: var(--lc28-color-grafite);
+  --lc28-background: var(--lc28-color-off-white);
+  --lc28-surface: var(--lc28-color-cinza-claro);
+  --lc28-action: var(--lc28-color-azul-profundo);
+  --lc28-onAction: var(--lc28-color-off-white);
+  --lc28-accent: var(--lc28-color-azul-nevoa);
+}

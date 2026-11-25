@@ -15,9 +15,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://lc28.com.br/img/og.jpg">
 <link rel="canonical" href="https://lc28.com.br/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"LC28","url":"https://lc28.com.br/","logo":"https://lc28.com.br/img/favicon.png","image":"https://lc28.com.br/img/og.jpg","description":"Gestão de tráfego pago, sites, landing pages e automação com IA no WhatsApp para negócios locais.","areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://instagram.com/lc28.tech"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"LC28","url":"https://lc28.com.br/","logo":"https://lc28.com.br/img/apple-touch-icon.png","image":"https://lc28.com.br/img/og.jpg","description":"Gestão de tráfego pago, sites, landing pages e automação com IA no WhatsApp para negócios locais.","areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://instagram.com/lc28.tech"]}</script>
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#0B1824">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <title>LC28 · Mais clientes no WhatsApp, todos respondidos</title>
@@ -408,7 +409,7 @@ button,input,textarea{font:inherit;color:inherit}
 .foot-brand{grid-column:1/-1;display:grid;gap:12px;align-content:start;font-size:14.5px;color:var(--muted-on-dark)}
 .foot-brand strong{color:#fff;font-weight:600}
 .foot-brand-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.foot-logo img{height:34px;width:auto;display:block}
+.foot-logo img{height:44px;width:auto;display:block}
 @media(min-width:860px){.foot-grid{grid-template-columns:1.6fr 1fr 1fr;gap:40px}.foot-brand{grid-column:auto;max-width:400px}}
 .foot-social{display:flex;gap:8px}
 .foot-social a{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-dark);color:#fff;transition:background .2s}
@@ -430,8 +431,10 @@ button,input,textarea{font:inherit;color:inherit}
 .topbar{background:transparent;border-bottom:1px solid transparent;transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease}
 .topbar.scrolled,.topbar:has(.mobile-menu:not([hidden])){background:rgba(11,24,36,.8);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border-bottom-color:rgba(143,179,201,.14)}
 .topbar .bar{min-height:64px}
-.logo img{height:30px;width:auto;box-shadow:none;border-radius:0}
-@media(min-width:860px){.logo img{height:34px}}
+/* Marca V11: principal a partir de 120 px de largura; monograma em telas estreitas */
+.logo img{height:44px;width:auto;box-shadow:none;border-radius:0}
+.logo .l-mono{display:none}
+@media(max-width:599px){.logo .l-full{display:none}.logo .l-mono{display:block;height:42px}}
 .topbar nav a{color:rgba(248,250,252,.68);font-weight:500}
 .topbar nav a:hover{color:#F8FAFC}
 .btn-solid{background:#F8FAFC;color:#0F1F2E;border-radius:12px;min-height:52px;padding:0 22px;font-weight:600;gap:10px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 10px 30px -12px rgba(143,179,201,.55);transition:transform .2s ease,box-shadow .2s ease,background .2s}
@@ -752,11 +755,90 @@ html{background:#0B1824}
 .ap-team i{width:34px;height:34px}.ap-days span{padding:5px 0}.ap-slots span{padding:5px 0}
 .ap-food b,.ap-sku b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ap-total small{white-space:nowrap}.ap-sku span{white-space:nowrap}
+
+/* Segmentos em carrossel (bloco Gallery4 recriado em HTML/CSS, sem React) */
+.gal{padding-block:56px 40px;overflow:hidden}
+.gal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.gal-copy{display:grid;gap:10px;max-width:620px}
+.gal-copy h2{font-size:clamp(28px,5.5vw,36px);font-weight:700;letter-spacing:-0.02em}
+.gal-copy p:not(.eyebrow){color:var(--muted);max-width:56ch}
+.gal-arrows{display:none;gap:8px;flex:none}
+@media(min-width:768px){.gal-arrows{display:flex}.gal-head{margin-bottom:44px}}
+.gal-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s}
+.gal-btn:hover:not([disabled]){border-color:var(--mist-ink);background:var(--mist-soft)}
+.gal-btn[disabled]{opacity:.4;cursor:default}
+.gal-btn svg{width:20px;height:20px}
+.gal-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px max(16px,calc((100vw - 1120px)/2 + 16px)) 8px;scroll-padding-inline:max(16px,calc((100vw - 1120px)/2 + 16px));outline:none}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-card{position:relative;flex:0 0 min(320px,82vw);min-height:27rem;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;text-decoration:none;color:#F8FAFC;background:var(--graphite);display:flex;flex-direction:column;justify-content:flex-end;border:0;padding:0;text-align:left;font:inherit;cursor:pointer}
+@media(min-width:1024px){.gal-card{flex-basis:360px}}
+.gal-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.gal-card:hover img,.gal-card:focus-visible img{transform:scale(1.05)}
+.gal-card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(46,93,122,0) 0%,rgba(46,93,122,.25) 30%,rgba(15,31,46,.82) 58%,rgba(15,31,46,.96) 100%)}
+.gal-body{position:relative;z-index:2;display:grid;gap:8px;padding:24px}
+@media(min-width:768px){.gal-body{padding:28px}}
+.gal-kind{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.gal-card h3{font-size:21px;font-weight:700}
+.gal-card p{font-size:15px;line-height:1.5;color:rgba(248,250,252,.86);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.gal-go{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14px;font-weight:600}
+.gal-go svg{transition:transform .2s ease}
+.gal-card:hover .gal-go svg{transform:translateX(4px)}
+.gal-help{margin-top:18px;text-align:center;color:var(--muted);font-size:15px}
+.gal-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.gal-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(46,93,122,.22);cursor:pointer;transition:background .25s,width .25s}
+.gal-dots button.on{background:var(--action);width:22px}
+.gal-dots button::after{content:"";display:block;width:28px;height:28px;margin:-10px}
+
+/* LC28 x jeito comum (bloco comparison-2 recriado) */
+.cmp-head{text-align:center;justify-items:center;margin-inline:auto;max-width:640px}
+.cmp-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.cmp-badge svg{width:15px;height:15px;color:var(--action)}
+.cmp{display:grid;gap:16px;max-width:900px;margin:0 auto}
+@media(min-width:640px){.cmp{grid-template-columns:1fr 1fr}}
+.cmp-card{display:flex;flex-direction:column;border-radius:var(--r);border:1px solid var(--line);background:#fff;box-shadow:0 1px 2px rgba(15,31,46,.04)}
+.cmp-card.us{border-color:rgba(46,93,122,.45);box-shadow:0 0 0 4px rgba(143,179,201,.22),0 24px 48px -32px rgba(15,31,46,.45)}
+.cmp-card.them{background:rgba(230,238,244,.45)}
+.cmp-top{padding:22px 22px 18px;display:grid;gap:6px;border-bottom:1px solid var(--line)}
+.cmp-title{display:flex;align-items:center;gap:10px;min-height:28px}
+.cmp-title img{height:42px;width:auto;display:block;margin:-6px 0 -6px -6px}
+.cmp-title b{font-family:var(--font-display);font-size:17px;font-weight:700}
+.cmp-card.them .cmp-title b{color:var(--muted)}
+.cmp-pill{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--action);color:var(--on-action)}
+.cmp-top p{font-size:14px;color:var(--muted)}
+.cmp-list{list-style:none;margin:0;padding:18px 22px;display:grid;gap:12px;flex:1}
+.cmp-list li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;line-height:1.45}
+.cmp-list i{flex:none;width:18px;height:18px;margin-top:1px;display:grid;place-items:center;border-radius:5px}
+.cmp-list i svg{width:12px;height:12px}
+.us .cmp-list i{background:var(--action);color:var(--on-action)}
+.them .cmp-list i{background:var(--lc28-color-cinza-claro);color:var(--muted)}
+.them .cmp-list li{color:var(--muted)}
+.cmp-foot{padding:16px 22px 22px;border-top:1px solid var(--line)}
+.cmp-foot .btn{width:100%;min-height:48px;border-radius:12px;font-size:15px}
+.cmp-foot .btn-sec{background:var(--lc28-color-cinza-claro);color:var(--ink)}
+.cmp-foot .btn-sec:hover{background:#D9E5EE}
+
+/* Chamada com lista (bloco cta-4 recriado) */
+.cta4{margin-top:20px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;border-radius:var(--r-xl);background:var(--graphite);color:#F8FAFC;padding:32px 24px;position:relative;overflow:hidden;isolation:isolate}
+.cta4::after{content:"";position:absolute;inset:0 0 0 auto;width:min(55%,520px);z-index:-1;background:url("img/padrao-continuidade.svg") 0 0/540px auto repeat;opacity:.5;-webkit-mask-image:linear-gradient(to left,#000 20%,transparent);mask-image:linear-gradient(to left,#000 20%,transparent)}
+@media(min-width:860px){.cta4{flex-direction:row;align-items:center;padding:48px 64px}}
+.cta4-copy{display:grid;gap:10px;max-width:520px}
+.cta4-copy h3{font-size:clamp(22px,4.5vw,28px);font-weight:700;letter-spacing:-0.01em}
+.cta4-copy p{color:var(--muted-on-dark)}
+.cta4-copy .btn-solid{justify-self:start;margin-top:10px}
+.cta4-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:15px;flex:none}
+.cta4-list li{display:flex;align-items:center;gap:10px}
+.cta4-list svg{width:18px;height:18px;flex:none;color:var(--mist)}
+
+/* Celular dos modelos com moldura mais realista (mockup de celular) */
+.iphone{background:linear-gradient(145deg,#4A5E70 0%,#1B2C3B 18%,#0B1824 50%,#1B2C3B 82%,#3E5264 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),inset 0 0 0 3px #0B1824,0 50px 80px -40px rgba(0,0,0,.9),0 0 60px -20px rgba(143,179,201,.45)}
+.iphone::before{content:"";position:absolute;inset:11px;border-radius:34px;z-index:3;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.04) 28%,transparent 42%)}
+.iphone::after{content:"";position:absolute;left:-3px;top:96px;width:3px;height:26px;border-radius:2px 0 0 2px;background:#33475A;box-shadow:0 44px 0 #33475A,0 0 0 0 transparent,calc(236px + 3px) 30px 0 #33475A}
+.iphone .ap{box-shadow:0 0 0 1px rgba(0,0,0,.6)}
 </style>
 
 <header class="topbar">
   <div class="wrap bar">
-    <a class="logo" href="#topo" aria-label="LC28, voltar ao início"><img src="img/logo-principal-negativa.svg" alt="" width="92" height="30"></a>
+    <a class="logo" href="#topo" aria-label="LC28, voltar ao início"><img class="l-full" src="img/logo-principal-negativa.svg" alt="" width="129" height="44"><img class="l-mono" src="img/logo-monograma-negativa.svg" alt="" width="44" height="44"></a>
     <nav aria-label="Seções">
       <a href="#solucoes">Soluções</a>
       <a href="#como-funciona">Como funciona</a>
@@ -829,25 +911,21 @@ html{background:#0B1824}
   </section>
 
   <!-- Segmentos -->
-  <section class="segs" aria-label="Negócios que a LC28 atende">
-    <div class="wrap segs-head"><p class="eyebrow">Para negócios locais</p><p class="segs-sub">Clínicas, escolas, oficinas, comércios e distribuidoras que atendem pelo WhatsApp.</p></div>
-    <div class="segs-track" id="segs-track"></div>
-  </section>
-
-  <!-- 2 · Soluções -->
-  <section class="band" id="solucoes">
-    <div class="wrap">
-      <div class="section-head">
+  <section class="gal" id="solucoes" aria-labelledby="gal-title">
+    <div class="wrap gal-head">
+      <div class="gal-copy">
         <p class="eyebrow">Soluções</p>
-        <h2>Seis frentes. Você pode começar por uma ou combinar.</h2>
-        <p>Escolha uma frente e o diagnóstico já abre com ela marcada.</p>
+        <h2 id="gal-title">Tráfego, site, app, sistema e IA para o seu tipo de&nbsp;negócio.</h2>
+        <p>Escolha o seu e o diagnóstico já abre com a solução marcada.</p>
       </div>
-      <div class="svc-grid" id="svc-grid"></div>
-      <div class="help-row help-row-sol">
-        <span>Não sabe qual faz sentido?</span>
-        <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button>
+      <div class="gal-arrows">
+        <button type="button" class="gal-btn" id="gal-prev" aria-label="Anterior" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+        <button type="button" class="gal-btn" id="gal-next" aria-label="Próximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
       </div>
     </div>
+    <div class="gal-track" id="gal-track" role="region" aria-roledescription="carrossel" aria-label="Segmentos atendidos" tabindex="0"></div>
+    <div class="gal-dots" id="gal-dots"></div>
+    <p class="wrap gal-help">Não sabe qual faz sentido? <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button></p>
   </section>
 
   <!-- 3 · Como funciona -->
@@ -863,15 +941,6 @@ html{background:#0B1824}
         <li class="step"><div class="step-top"><span class="step-ico tilt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 16V9m6 7V5m6 11v-4M5 6l5-3 5 4 4-2"/></svg></span><span class="step-line"></span></div><span class="n">PASSO 2</span><h3>Definir a primeira entrega</h3><p>Escolhemos o que resolver primeiro, com escopo, prazo e investimento combinados antes de começar.</p><ul><li>Escopo da primeira etapa</li><li>Proposta comercial</li></ul></li>
         <li class="step"><div class="step-top"><span class="step-ico tilt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="12" rx="2"/><path d="M9 21h6m-3-4v4M10 9l-2 2 2 2m4-4 2 2-2 2"/></svg></span><span class="step-line"></span></div><span class="n">PASSO 3</span><h3>Construir e validar</h3><p>Entregamos em etapas curtas e ajustamos com a sua equipe usando a solução de verdade.</p><ul><li>Entregas curtas</li><li>Ajustes com a equipe</li></ul></li>
       </ol>
-      <div class="how-media">
-        <figure class="how-photo"><img src="img/contexto.webp" alt="Duas pessoas conversando sobre a rotina do negócio, com caderno e notebook" loading="lazy"></figure>
-        <div class="diagram" aria-label="Exemplo de primeira entrega">
-          <p class="eyebrow">Exemplo de primeira entrega</p>
-          <div class="d-row tilt"><span class="d-dot">A</span><div>Pedidos chegam pelo WhatsApp<small>Hoje: ninguém sabe quem já respondeu</small></div></div>
-          <div class="d-row tilt"><span class="d-dot">B</span><div>Automação separa e registra cada pedido<small>Primeira entrega, em uso em poucas semanas</small></div></div>
-          <div class="d-row tilt"><span class="d-dot">C</span><div>Painel mostra o que está pendente<small>Próxima etapa, se a primeira funcionar bem</small></div></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -931,6 +1000,29 @@ html{background:#0B1824}
     </div>
   </section>
 
+  <!-- LC28 x jeito comum -->
+  <section class="band" id="diferencas">
+    <div class="wrap">
+      <div class="section-head cmp-head">
+        <span class="cmp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg>Por que a LC28</span>
+        <h2>Feito de outro jeito, de&nbsp;propósito.</h2>
+        <p>Anúncio, site e atendimento com uma equipe só, e tudo combinado por escrito.</p>
+      </div>
+      <div class="cmp">
+        <article class="cmp-card us">
+          <div class="cmp-top"><div class="cmp-title"><img src="img/logo-principal-positiva.svg" alt="LC28" width="123" height="42"><span class="cmp-pill">Como trabalhamos</span></div><p>Do diagnóstico à entrega, com o que foi combinado por escrito.</p></div>
+          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Diagnóstico grátis antes de qualquer proposta</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Domínio, site e contas de anúncio no nome da sua empresa</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Tráfego pago sem fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Preço fechado na proposta, com escopo e prazo</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Relatório mensal com contatos e custo por contato</span></li></ul>
+          <div class="cmp-foot"><a class="btn btn-dark" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+        </article>
+        <article class="cmp-card them">
+          <div class="cmp-top"><div class="cmp-title"><b>O jeito comum</b></div><p>Atritos que muitos negócios locais encontram ao contratar.</p></div>
+          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Orçamento pronto antes de entender a sua rotina</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contas e domínio no nome de quem presta o serviço</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contrato com fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Valor que muda no meio do projeto</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Relatório com curtidas e alcance</span></li></ul>
+          <div class="cmp-foot"><a class="btn btn-sec" href="#como-funciona">Ver como funciona <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Oferta clara -->
   <section class="band mist" id="investimento">
     <div class="wrap">
@@ -938,20 +1030,22 @@ html{background:#0B1824}
         <p class="eyebrow">Investimento</p>
         <h2>Sem letra miúda: você sabe o que paga e para quem.</h2>
       </div>
-      <ul class="o2-trust">
-        <li>Sem fidelidade no tráfego</li>
-        <li>Domínio e contas no nome da sua empresa</li>
-        <li id="of-host">Hospedagem e manutenção com valor fixo na proposta</li>
-      </ul>
       <div class="offer2">
         <div class="o2-items">
-          <div><span>Tráfego pago</span><b id="of-price">A partir de R$ 1.500 por mês</b><em>Criativos, ajustes e relatório mensal. A verba dos anúncios você paga direto à Meta. Sem fidelidade.</em></div>
+          <div><span>Tráfego pago</span><b id="of-price">A partir de R$ 1.500 por mês</b><em>Criativos, ajustes e relatório mensal. A verba vai direto para a Meta.</em></div>
           <div><span>Landing page</span><b>A partir de R$ 1.200</b><em>Página focada numa oferta, com o contato indo direto para o WhatsApp.</em></div>
           <div><span>Site institucional</span><b>A partir de R$ 2.500</b><em>Serviços, equipe e pedido de orçamento, pronto para anúncios e Google.</em></div>
           <div><span>Automação com IA</span><b>A partir de R$ 1.500</b><em>Atendimento e pedidos do WhatsApp separados e registrados sozinhos.</em></div>
           <div><span>Aplicativo e sistema</span><b>Sob medida</b><em>Preço fechado, com escopo e prazo, logo depois do diagnóstico.</em></div>
         </div>
-        <div class="o2-foot"><p><b>Não sabe por onde começar?</b> O diagnóstico grátis indica.</p><a class="btn btn-solid" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="cta4">
+        <div class="cta4-copy">
+          <h3>Não sabe por onde começar? Comece pelo diagnóstico.</h3>
+          <p>Mostre como sua equipe atende e agenda hoje. A LC28 responde no WhatsApp com o que vale resolver primeiro.</p>
+          <a class="btn btn-solid" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+        <ul class="cta4-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Mostra o que resolver primeiro</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Indica a frente certa para o seu negócio</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Sem custo e sem compromisso</li></ul>
       </div>
     </div>
   </section>
@@ -1003,7 +1097,7 @@ html{background:#0B1824}
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="foot-brand-top">
-          <a class="foot-logo" href="#topo" aria-label="LC28, voltar ao início"><img src="img/logo-principal-negativa.svg" alt="LC28" width="110" height="36"></a>
+          <a class="foot-logo" href="#topo" aria-label="LC28, voltar ao início"><img src="img/logo-principal-negativa.svg" alt="LC28" width="129" height="44"></a>
           <div class="foot-social">
             <a href="https://instagram.com/lc28.tech" target="_blank" rel="noopener" aria-label="Instagram da LC28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
             <a id="foot-wa-ico" href="#briefing" data-start="" aria-label="WhatsApp da LC28" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></a>
@@ -1034,10 +1128,9 @@ html{background:#0B1824}
       </nav>
     </div>
 
-    <div class="foot-sign" aria-hidden="true"><svg viewBox="16 14 438 136" preserveAspectRatio="xMinYMin meet"><defs><linearGradient id="fsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC" stop-opacity=".22"/><stop offset=".55" stop-color="#8FB3C9" stop-opacity=".3"/><stop offset="1" stop-color="#2E5D7A" stop-opacity=".28"/></linearGradient></defs><path d="M 23 0 L 50 0 L 27 69 L 69 69 L 82 92 L 0 92 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(21 31) scale(1)"/><path d="M 101 15 L 82 34 C 72 22 59 20 48 24 C 31 30 21 45 24 60 C 27 77 52 81 73 67 L 89 83 C 69 100 37 101 17 87 C -2 73 -4 47 8 27 C 27 -3 72 -10 101 15 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(115 31) scale(1)"/><path d="M 16 28 C 24 10 44 0 67 0 C 92 0 106 11 106 28 C 105 50 86 64 64 70 C 47 75 36 81 32 90 L 82 90 L 73 112 L 0 112 C 4 87 20 68 43 59 L 61 52 C 77 46 82 38 81 31 C 80 23 73 20 62 20 C 49 20 41 25 37 32 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(232 19) scale(1)"/><path d="M 8 60 C 8 26 28 4 60 1 C 88 -2 108 10 108 31 C 108 45 102 54 93 60 C 103 66 108 75 108 87 C 108 104 91 116 65 116 C 40 116 22 103 15 87 C 11 77 14 67 22 61 Z M 35 54 C 44 49 57 47 69 45 C 83 43 88 38 88 31 C 88 23 80 20 67 20 C 48 20 38 30 35 54 Z M 35 79 C 40 90 52 95 66 95 C 80 95 87 90 87 81 C 87 73 80 69 71 69 C 58 70 45 74 35 79 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(341 19) scale(1)"/></svg></div>
+    <div class="foot-sign" aria-hidden="true"><svg viewBox="16 14 414 124" preserveAspectRatio="xMinYMin meet"><defs><linearGradient id="fsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC" stop-opacity=".22"/><stop offset=".55" stop-color="#8FB3C9" stop-opacity=".3"/><stop offset="1" stop-color="#2E5D7A" stop-opacity=".28"/></linearGradient></defs><path d="M 23 0 L 50 0 L 27 69 L 69 69 L 82 92 L 0 92 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(21 31) scale(1)"/><path d="M 101 15 L 82 34 C 72 22 59 20 48 24 C 31 30 21 45 24 60 C 27 77 52 81 73 67 L 89 83 C 69 100 37 101 17 87 C -2 73 -4 47 8 27 C 27 -3 72 -10 101 15 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(115 31) scale(1)"/><path d="M 16 28 C 24 10 44 0 67 0 C 92 0 106 11 106 28 C 105 50 86 64 64 70 C 47 75 36 81 32 90 L 82 90 L 73 112 L 0 112 C 4 87 20 68 43 59 L 61 52 C 77 46 82 38 81 31 C 80 23 73 20 62 20 C 49 20 41 25 37 32 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(214 19) scale(1)"/><path d="M 63 0 C 86 0 103 12 101 30 C 100 41 92 50 78 56 C 91 63 97 72 95 84 C 92 103 72 114 46 114 C 20 114 3 102 5 83 C 6 70 16 60 32 54 C 21 48 17 40 19 30 C 22 12 40 0 63 0 Z M 60 18 C 49 18 41 23 40 31 C 39 38 46 44 57 49 C 70 44 79 38 80 31 C 81 23 73 18 60 18 Z M 52 63 C 36 69 27 76 26 84 C 25 92 34 97 47 97 C 62 97 72 91 74 83 C 75 76 67 69 52 63 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(323 19) scale(1)"/></svg></div>
     <div class="foot-bottom">
       <span>© 2026 LC28<span id="foot-cnpj" hidden></span> · <a href="politica-de-privacidade.html">Política de privacidade</a></span>
-      <span>Não pedimos senhas, documentos pessoais ou dados dos seus clientes.</span>
     </div>
   </div>
 </footer>
@@ -1109,10 +1202,7 @@ const CASES = [
 // Dúvidas por categoria (abas). Edite à vontade.
 const FAQ = {
   "Custos e contrato": [
-    ["Quanto custa?", "Os valores de entrada estão na seção Investimento. O preço final depende do escopo e vem numa proposta fechada depois do diagnóstico."],
     ["A verba dos anúncios está incluída?", "Não. A verba é paga direto à Meta ou ao Google, no seu cartão. A LC28 cobra só a gestão das campanhas."],
-    ["Tem fidelidade?", "No tráfego pago, não. Você continua porque está dando resultado, e pode parar quando quiser."],
-    ["O site e a página ficam no meu nome?", "Sim. Domínio, site, página e contas de anúncio ficam no nome da sua empresa. Se um dia sair da LC28, leva tudo com você."],
     ["Depois de pronto, tem mensalidade?", `Sim, um plano mensal de hospedagem e manutenção, para o site ficar no ar, seguro e atualizado. ${MENSALIDADE_HOSPEDAGEM ? `Custa ${MENSALIDADE_HOSPEDAGEM} por mês.` : "O valor fixo vem na proposta."}`],
   ],
   "Prazo e resultado": [
@@ -1121,11 +1211,9 @@ const FAQ = {
     ["Vou precisar mexer em alguma coisa técnica?", "Não. A LC28 cuida da parte técnica. Da sua parte, basta aprovar as etapas e atender os contatos que chegam."],
   ],
   "Diagnóstico": [
-    ["Quanto tempo leva para preencher?", "Cerca de 4 minutos. São telas curtas e quase tudo é de tocar para escolher."],
     ["E se eu não souber qual serviço escolher?", "Marque “Preciso de ajuda para escolher” e conte o que está travando. A primeira conversa serve para definir por onde começar."],
     ["O que acontece depois de enviar?", "A equipe da LC28 lê o resumo e responde no próprio WhatsApp com os próximos passos. A proposta só vem depois de alinhar o escopo com você."],
     ["Vocês atendem a minha cidade?", "Sim. O atendimento é online, para todo o Brasil."],
-    ["Que dados vocês pedem?", "Nome, papel na empresa e informações do negócio. Não pedimos senhas, documentos pessoais ou dados dos seus clientes."],
   ],
 };
 
@@ -1655,15 +1743,43 @@ document.querySelectorAll(".dm-tab").forEach(t => t.addEventListener("click", ()
 if (MENSALIDADE_TRAFEGO) $("#of-price").textContent = MENSALIDADE_TRAFEGO + " por mês";
 
 /* Soluções: grade das frentes */
-$("#svc-grid").innerHTML = SERVICES.map(s => `<article class="svc"><figure class="svc-photo"><img src="${s.img}" alt="" loading="lazy"></figure>` +
-  `<div class="svc-body"><div class="svc-head"><span class="svc-ico" aria-hidden="true">${s.emoji}</span><div><p class="kind">${esc(s.kind)}</p><h3>${esc(s.name)}</h3></div></div>` +
-  `<p class="ex">${esc(s.ex)}</p><button type="button" class="btn-link" data-pick="${s.id}">Começar com ${esc(s.short.toLowerCase().replace(/\bia\b/, "IA"))} →</button></div></article>`).join("");
 
-/* Faixa de segmentos */
-$("#segs-track").innerHTML = [
-  ["img/case-clinica.webp", "💆", "Clínicas e estética"], ["img/case-escola.webp", "📚", "Escolas e cursos"], ["img/sistema.webp", "🔧", "Oficinas"],
-  ["img/ia.webp", "🥐", "Padarias e comércio"], ["img/app.webp", "🏋️", "Academias"], ["img/case-distribuidora.webp", "📦", "Distribuidoras"],
-].map(([src, e, t]) => `<figure class="seg"><img src="${src}" alt="" loading="lazy"><figcaption>${t}</figcaption></figure>`).join("");
+
+/* Segmentos: carrossel (Gallery4 recriado). Exemplos do que a LC28 monta, sem números nem clientes. */
+(function () {
+  const SEGS = [
+    { img: "img/case-clinica.webp", kind: "Tráfego pago + landing page", title: "Clínicas e estética", desc: "Anúncio para quem mora perto, página com os horários livres e contato direto no WhatsApp.", pick: "trafego" },
+    { img: "img/case-escola.webp", kind: "Landing page", title: "Escolas e cursos", desc: "Página de matrícula com formulário que manda o contato pronto para a secretaria.", pick: "landing" },
+    { img: "img/sistema.webp", kind: "Sistema sob medida", title: "Oficinas", desc: "Painel com ordens de serviço, peças pedidas e o status de cada carro.", pick: "sistema" },
+    { img: "img/ia.webp", kind: "Automação com IA", title: "Padarias e comércio", desc: "Pedidos do WhatsApp lidos, separados e registrados sozinhos, com aviso de quem precisa responder.", pick: "ia" },
+    { img: "img/app.webp", kind: "Aplicativo", title: "Academias", desc: "App para alunos reservarem horário e receberem aviso quando a aula mudar.", pick: "app" },
+    { img: "img/case-distribuidora.webp", kind: "Sistema + automação", title: "Distribuidoras", desc: "Catálogo com pedido online e painel para a equipe separar o que chegou.", pick: "sistema" },
+    { img: "img/site.webp", kind: "Site institucional", title: "Escritórios e serviços", desc: "Site com serviços, equipe e botão para pedir orçamento, pronto para anúncios e Google.", pick: "site" },
+  ];
+  const track = $("#gal-track"), dots = $("#gal-dots"), prev = $("#gal-prev"), next = $("#gal-next");
+  track.innerHTML = SEGS.map(c => `<button type="button" class="gal-card" data-pick="${c.pick}" aria-label="${esc(c.title)}: começar o diagnóstico">` +
+    `<img src="${c.img}" alt="" loading="lazy"><div class="gal-body"><span class="gal-kind">${esc(c.kind)}</span><h3>${esc(c.title)}</h3><p>${esc(c.desc)}</p>` +
+    `<span class="gal-go">Começar por aqui <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></button>`).join("");
+  const cards = [...track.children];
+  dots.innerHTML = cards.map((_, i) => `<button type="button" aria-label="Ir para o item ${i + 1}"></button>`).join("");
+  const dotEls = [...dots.children];
+  const step = () => cards[1].offsetLeft - cards[0].offsetLeft;
+  const go = i => track.scrollTo({ left: cards[Math.max(0, Math.min(cards.length - 1, i))].offsetLeft - cards[0].offsetLeft });
+  let cur = 0;
+  function update() {
+    const max = track.scrollWidth - track.clientWidth;
+    cur = Math.round(track.scrollLeft / step());
+    if (track.scrollLeft >= max - 4) cur = cards.length - 1;
+    dotEls.forEach((d, i) => { d.classList.toggle("on", i === cur); d.setAttribute("aria-current", i === cur ? "true" : "false"); });
+    prev.disabled = track.scrollLeft <= 4; next.disabled = track.scrollLeft >= max - 4;
+  }
+  prev.addEventListener("click", () => track.scrollBy({ left: -step() }));
+  next.addEventListener("click", () => track.scrollBy({ left: step() }));
+  dotEls.forEach((d, i) => d.addEventListener("click", () => go(i)));
+  track.addEventListener("keydown", e => { if (e.key === "ArrowRight") { e.preventDefault(); next.click(); } if (e.key === "ArrowLeft") { e.preventDefault(); prev.click(); } });
+  let raf = 0; track.addEventListener("scroll", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+  addEventListener("resize", update); update();
+})();
 
 /* Resultados: carrossel de cases */
 (function () {
@@ -1736,7 +1852,7 @@ if (WHATSAPP_NUMBER) {
   const fw = $("#foot-wa"); fw.href = url; fw.textContent = "+" + n.replace(/^(\d{2})(\d{2})(\d{4,5})(\d{4})$/, "$1 $2 $3-$4"); $("#foot-wa-li").hidden = false;
 }
 if (CNPJ) { const c = $("#foot-cnpj"); c.textContent = " · CNPJ " + CNPJ; c.hidden = false; }
-if (MENSALIDADE_HOSPEDAGEM) $("#of-host").textContent = `Hospedagem e manutenção: ${MENSALIDADE_HOSPEDAGEM}/mês`;
+if (MENSALIDADE_HOSPEDAGEM && $("#of-host")) $("#of-host").textContent = `Hospedagem e manutenção: ${MENSALIDADE_HOSPEDAGEM}/mês`;
 
 /* CTA fixo no celular: aparece depois que o botão da abertura sai da tela; some no diagnóstico e no rodapé */
 (function () {
