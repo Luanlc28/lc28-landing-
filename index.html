@@ -783,6 +783,7 @@ html{background:#0B1824}
 .gal-go{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14px;font-weight:600}
 .gal-go svg{transition:transform .2s ease}
 .gal-card:hover .gal-go svg{transform:translateX(4px)}
+.gal-help{margin-top:18px;text-align:center;color:var(--muted);font-size:15px}
 .gal-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
 .gal-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(46,93,122,.22);cursor:pointer;transition:background .25s,width .25s}
 .gal-dots button.on{background:var(--action);width:22px}
@@ -910,12 +911,12 @@ html{background:#0B1824}
   </section>
 
   <!-- Segmentos -->
-  <section class="gal" id="segmentos" aria-labelledby="gal-title">
+  <section class="gal" id="solucoes" aria-labelledby="gal-title">
     <div class="wrap gal-head">
       <div class="gal-copy">
-        <p class="eyebrow">Para negócios locais</p>
-        <h2 id="gal-title">O que a LC28 monta para cada tipo de&nbsp;negócio.</h2>
-        <p>Clínicas, escolas, oficinas, comércios e distribuidoras que atendem pelo WhatsApp. Escolha o seu e o diagnóstico já abre com a frente marcada.</p>
+        <p class="eyebrow">Soluções</p>
+        <h2 id="gal-title">Tráfego, site, app, sistema e IA para o seu tipo de&nbsp;negócio.</h2>
+        <p>Escolha o seu e o diagnóstico já abre com a solução marcada.</p>
       </div>
       <div class="gal-arrows">
         <button type="button" class="gal-btn" id="gal-prev" aria-label="Anterior" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
@@ -924,22 +925,7 @@ html{background:#0B1824}
     </div>
     <div class="gal-track" id="gal-track" role="region" aria-roledescription="carrossel" aria-label="Segmentos atendidos" tabindex="0"></div>
     <div class="gal-dots" id="gal-dots"></div>
-  </section>
-
-  <!-- 2 · Soluções -->
-  <section class="band" id="solucoes">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Soluções</p>
-        <h2>Seis frentes. Você pode começar por uma ou combinar.</h2>
-        <p>Escolha uma frente e o diagnóstico já abre com ela marcada.</p>
-      </div>
-      <div class="svc-grid" id="svc-grid"></div>
-      <div class="help-row help-row-sol">
-        <span>Não sabe qual faz sentido?</span>
-        <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button>
-      </div>
-    </div>
+    <p class="wrap gal-help">Não sabe qual faz sentido? <button class="btn-link" type="button" data-pick="ajuda">Preciso de ajuda para escolher</button></p>
   </section>
 
   <!-- 3 · Como funciona -->
@@ -955,15 +941,6 @@ html{background:#0B1824}
         <li class="step"><div class="step-top"><span class="step-ico tilt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 16V9m6 7V5m6 11v-4M5 6l5-3 5 4 4-2"/></svg></span><span class="step-line"></span></div><span class="n">PASSO 2</span><h3>Definir a primeira entrega</h3><p>Escolhemos o que resolver primeiro, com escopo, prazo e investimento combinados antes de começar.</p><ul><li>Escopo da primeira etapa</li><li>Proposta comercial</li></ul></li>
         <li class="step"><div class="step-top"><span class="step-ico tilt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="12" rx="2"/><path d="M9 21h6m-3-4v4M10 9l-2 2 2 2m4-4 2 2-2 2"/></svg></span><span class="step-line"></span></div><span class="n">PASSO 3</span><h3>Construir e validar</h3><p>Entregamos em etapas curtas e ajustamos com a sua equipe usando a solução de verdade.</p><ul><li>Entregas curtas</li><li>Ajustes com a equipe</li></ul></li>
       </ol>
-      <div class="how-media">
-        <figure class="how-photo"><img src="img/contexto.webp" alt="Duas pessoas conversando sobre a rotina do negócio, com caderno e notebook" loading="lazy"></figure>
-        <div class="diagram" aria-label="Exemplo de primeira entrega">
-          <p class="eyebrow">Exemplo de primeira entrega</p>
-          <div class="d-row tilt"><span class="d-dot">A</span><div>Pedidos chegam pelo WhatsApp<small>Hoje: ninguém sabe quem já respondeu</small></div></div>
-          <div class="d-row tilt"><span class="d-dot">B</span><div>Automação separa e registra cada pedido<small>Primeira entrega, em uso em poucas semanas</small></div></div>
-          <div class="d-row tilt"><span class="d-dot">C</span><div>Painel mostra o que está pendente<small>Próxima etapa, se a primeira funcionar bem</small></div></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1029,17 +1006,17 @@ html{background:#0B1824}
       <div class="section-head cmp-head">
         <span class="cmp-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg>Por que a LC28</span>
         <h2>Feito de outro jeito, de&nbsp;propósito.</h2>
-        <p>O que muda no seu dia a dia quando anúncio, site e atendimento ficam com uma equipe só.</p>
+        <p>Anúncio, site e atendimento com uma equipe só, e tudo combinado por escrito.</p>
       </div>
       <div class="cmp">
         <article class="cmp-card us">
           <div class="cmp-top"><div class="cmp-title"><img src="img/logo-principal-positiva.svg" alt="LC28" width="123" height="42"><span class="cmp-pill">Como trabalhamos</span></div><p>Do diagnóstico à entrega, com o que foi combinado por escrito.</p></div>
-          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Diagnóstico grátis antes de qualquer proposta</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Anúncio, site e WhatsApp cuidados por uma equipe só</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Domínio, site e contas de anúncio no nome da sua empresa</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Tráfego pago sem fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Preço fechado na proposta, com escopo e prazo</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Entregas curtas, validadas com a sua equipe</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Relatório mensal com contatos e custo por contato</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Verba dos anúncios paga direto à Meta, no seu cartão</span></li></ul>
+          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Diagnóstico grátis antes de qualquer proposta</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Domínio, site e contas de anúncio no nome da sua empresa</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Tráfego pago sem fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Preço fechado na proposta, com escopo e prazo</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Relatório mensal com contatos e custo por contato</span></li></ul>
           <div class="cmp-foot"><a class="btn btn-dark" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
         </article>
         <article class="cmp-card them">
           <div class="cmp-top"><div class="cmp-title"><b>O jeito comum</b></div><p>Atritos que muitos negócios locais encontram ao contratar.</p></div>
-          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Orçamento pronto antes de entender a sua rotina</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Um fornecedor para o anúncio, outro para o site</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contas e domínio no nome de quem presta o serviço</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contrato com fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Valor que muda no meio do projeto</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Projeto grande entregue de uma vez, só no fim</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Relatório com curtidas e alcance</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Verba dos anúncios misturada com a taxa do serviço</span></li></ul>
+          <ul class="cmp-list"><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Orçamento pronto antes de entender a sua rotina</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contas e domínio no nome de quem presta o serviço</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Contrato com fidelidade</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Valor que muda no meio do projeto</span></li><li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 7l10 10M17 7 7 17"/></svg></i><span>Relatório com curtidas e alcance</span></li></ul>
           <div class="cmp-foot"><a class="btn btn-sec" href="#como-funciona">Ver como funciona <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
         </article>
       </div>
@@ -1053,14 +1030,9 @@ html{background:#0B1824}
         <p class="eyebrow">Investimento</p>
         <h2>Sem letra miúda: você sabe o que paga e para quem.</h2>
       </div>
-      <ul class="o2-trust">
-        <li>Sem fidelidade no tráfego</li>
-        <li>Domínio e contas no nome da sua empresa</li>
-        <li id="of-host">Hospedagem e manutenção com valor fixo na proposta</li>
-      </ul>
       <div class="offer2">
         <div class="o2-items">
-          <div><span>Tráfego pago</span><b id="of-price">A partir de R$ 1.500 por mês</b><em>Criativos, ajustes e relatório mensal. A verba dos anúncios você paga direto à Meta. Sem fidelidade.</em></div>
+          <div><span>Tráfego pago</span><b id="of-price">A partir de R$ 1.500 por mês</b><em>Criativos, ajustes e relatório mensal. A verba vai direto para a Meta.</em></div>
           <div><span>Landing page</span><b>A partir de R$ 1.200</b><em>Página focada numa oferta, com o contato indo direto para o WhatsApp.</em></div>
           <div><span>Site institucional</span><b>A partir de R$ 2.500</b><em>Serviços, equipe e pedido de orçamento, pronto para anúncios e Google.</em></div>
           <div><span>Automação com IA</span><b>A partir de R$ 1.500</b><em>Atendimento e pedidos do WhatsApp separados e registrados sozinhos.</em></div>
@@ -1073,7 +1045,7 @@ html{background:#0B1824}
           <p>Mostre como sua equipe atende e agenda hoje. A LC28 responde no WhatsApp com o que vale resolver primeiro.</p>
           <a class="btn btn-solid" href="#briefing" data-start="">Fazer diagnóstico grátis <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
         </div>
-        <ul class="cta4-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Leva cerca de 4 minutos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Resumo pronto para enviar no WhatsApp</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Você revisa tudo antes de enviar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Proposta só se fizer sentido</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Sem pedir senhas ou dados dos seus clientes</li></ul>
+        <ul class="cta4-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Mostra o que resolver primeiro</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Indica a frente certa para o seu negócio</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>Sem custo e sem compromisso</li></ul>
       </div>
     </div>
   </section>
@@ -1159,7 +1131,6 @@ html{background:#0B1824}
     <div class="foot-sign" aria-hidden="true"><svg viewBox="16 14 414 124" preserveAspectRatio="xMinYMin meet"><defs><linearGradient id="fsg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8FAFC" stop-opacity=".22"/><stop offset=".55" stop-color="#8FB3C9" stop-opacity=".3"/><stop offset="1" stop-color="#2E5D7A" stop-opacity=".28"/></linearGradient></defs><path d="M 23 0 L 50 0 L 27 69 L 69 69 L 82 92 L 0 92 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(21 31) scale(1)"/><path d="M 101 15 L 82 34 C 72 22 59 20 48 24 C 31 30 21 45 24 60 C 27 77 52 81 73 67 L 89 83 C 69 100 37 101 17 87 C -2 73 -4 47 8 27 C 27 -3 72 -10 101 15 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(115 31) scale(1)"/><path d="M 16 28 C 24 10 44 0 67 0 C 92 0 106 11 106 28 C 105 50 86 64 64 70 C 47 75 36 81 32 90 L 82 90 L 73 112 L 0 112 C 4 87 20 68 43 59 L 61 52 C 77 46 82 38 81 31 C 80 23 73 20 62 20 C 49 20 41 25 37 32 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(214 19) scale(1)"/><path d="M 63 0 C 86 0 103 12 101 30 C 100 41 92 50 78 56 C 91 63 97 72 95 84 C 92 103 72 114 46 114 C 20 114 3 102 5 83 C 6 70 16 60 32 54 C 21 48 17 40 19 30 C 22 12 40 0 63 0 Z M 60 18 C 49 18 41 23 40 31 C 39 38 46 44 57 49 C 70 44 79 38 80 31 C 81 23 73 18 60 18 Z M 52 63 C 36 69 27 76 26 84 C 25 92 34 97 47 97 C 62 97 72 91 74 83 C 75 76 67 69 52 63 Z" fill="url(#fsg)" fill-rule="evenodd" transform="translate(323 19) scale(1)"/></svg></div>
     <div class="foot-bottom">
       <span>© 2026 LC28<span id="foot-cnpj" hidden></span> · <a href="politica-de-privacidade.html">Política de privacidade</a></span>
-      <span>Não pedimos senhas, documentos pessoais ou dados dos seus clientes.</span>
     </div>
   </div>
 </footer>
@@ -1231,10 +1202,7 @@ const CASES = [
 // Dúvidas por categoria (abas). Edite à vontade.
 const FAQ = {
   "Custos e contrato": [
-    ["Quanto custa?", "Os valores de entrada estão na seção Investimento. O preço final depende do escopo e vem numa proposta fechada depois do diagnóstico."],
     ["A verba dos anúncios está incluída?", "Não. A verba é paga direto à Meta ou ao Google, no seu cartão. A LC28 cobra só a gestão das campanhas."],
-    ["Tem fidelidade?", "No tráfego pago, não. Você continua porque está dando resultado, e pode parar quando quiser."],
-    ["O site e a página ficam no meu nome?", "Sim. Domínio, site, página e contas de anúncio ficam no nome da sua empresa. Se um dia sair da LC28, leva tudo com você."],
     ["Depois de pronto, tem mensalidade?", `Sim, um plano mensal de hospedagem e manutenção, para o site ficar no ar, seguro e atualizado. ${MENSALIDADE_HOSPEDAGEM ? `Custa ${MENSALIDADE_HOSPEDAGEM} por mês.` : "O valor fixo vem na proposta."}`],
   ],
   "Prazo e resultado": [
@@ -1243,11 +1211,9 @@ const FAQ = {
     ["Vou precisar mexer em alguma coisa técnica?", "Não. A LC28 cuida da parte técnica. Da sua parte, basta aprovar as etapas e atender os contatos que chegam."],
   ],
   "Diagnóstico": [
-    ["Quanto tempo leva para preencher?", "Cerca de 4 minutos. São telas curtas e quase tudo é de tocar para escolher."],
     ["E se eu não souber qual serviço escolher?", "Marque “Preciso de ajuda para escolher” e conte o que está travando. A primeira conversa serve para definir por onde começar."],
     ["O que acontece depois de enviar?", "A equipe da LC28 lê o resumo e responde no próprio WhatsApp com os próximos passos. A proposta só vem depois de alinhar o escopo com você."],
     ["Vocês atendem a minha cidade?", "Sim. O atendimento é online, para todo o Brasil."],
-    ["Que dados vocês pedem?", "Nome, papel na empresa e informações do negócio. Não pedimos senhas, documentos pessoais ou dados dos seus clientes."],
   ],
 };
 
@@ -1777,9 +1743,7 @@ document.querySelectorAll(".dm-tab").forEach(t => t.addEventListener("click", ()
 if (MENSALIDADE_TRAFEGO) $("#of-price").textContent = MENSALIDADE_TRAFEGO + " por mês";
 
 /* Soluções: grade das frentes */
-$("#svc-grid").innerHTML = SERVICES.map(s => `<article class="svc"><figure class="svc-photo"><img src="${s.img}" alt="" loading="lazy"></figure>` +
-  `<div class="svc-body"><div class="svc-head"><span class="svc-ico" aria-hidden="true">${s.emoji}</span><div><p class="kind">${esc(s.kind)}</p><h3>${esc(s.name)}</h3></div></div>` +
-  `<p class="ex">${esc(s.ex)}</p><button type="button" class="btn-link" data-pick="${s.id}">Começar com ${esc(s.short.toLowerCase().replace(/\bia\b/, "IA"))} →</button></div></article>`).join("");
+
 
 /* Segmentos: carrossel (Gallery4 recriado). Exemplos do que a LC28 monta, sem números nem clientes. */
 (function () {
@@ -1888,7 +1852,7 @@ if (WHATSAPP_NUMBER) {
   const fw = $("#foot-wa"); fw.href = url; fw.textContent = "+" + n.replace(/^(\d{2})(\d{2})(\d{4,5})(\d{4})$/, "$1 $2 $3-$4"); $("#foot-wa-li").hidden = false;
 }
 if (CNPJ) { const c = $("#foot-cnpj"); c.textContent = " · CNPJ " + CNPJ; c.hidden = false; }
-if (MENSALIDADE_HOSPEDAGEM) $("#of-host").textContent = `Hospedagem e manutenção: ${MENSALIDADE_HOSPEDAGEM}/mês`;
+if (MENSALIDADE_HOSPEDAGEM && $("#of-host")) $("#of-host").textContent = `Hospedagem e manutenção: ${MENSALIDADE_HOSPEDAGEM}/mês`;
 
 /* CTA fixo no celular: aparece depois que o botão da abertura sai da tela; some no diagnóstico e no rodapé */
 (function () {

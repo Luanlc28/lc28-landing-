@@ -31,7 +31,7 @@ Arquivo único (`index.html`), sem dependências além das fontes do Google. Pod
 
 ## Blocos novos (recriados em HTML/CSS, sem React)
 
-- **Segmentos em carrossel** (`#segmentos`, base Gallery4): um card por tipo de negócio com o que a LC28 monta. Edite o array `SEGS` no script. Clicar abre o diagnóstico com a frente marcada.
+- **Soluções em carrossel** (`#solucoes`, base Gallery4): um card por tipo de negócio com a solução que a LC28 monta (substitui a antiga grade de seis frentes). Edite o array `SEGS` no script. Clicar abre o diagnóstico com a frente marcada.
 - **LC28 x jeito comum** (`#diferencas`, base comparison-2): só compromissos que já estão na oferta (sem fidelidade, contas no nome do cliente, preço fechado etc.).
 - **Chamada com lista** (`.cta4`, base cta-4): fecha a seção Investimento.
 - **Celular dos modelos**: moldura com botões laterais e reflexo (base mobile mockup).
